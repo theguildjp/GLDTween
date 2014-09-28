@@ -54,7 +54,11 @@ GLDTween.addTween(myView, {"duration":1.0, "delay":0.0, "transition":"easeInOutE
 
 
 ## 対応予定
+以下の型の全てのプロパティに対応予定
 
+- CGPoint
+- CGSize
+- CGRect
 - CGAffineTransform
 - CATransform3D
 - UIColor
