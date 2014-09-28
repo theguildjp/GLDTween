@@ -21,7 +21,7 @@ GLDTween.addTween(myView, {"duration":1.0, "delay":0.0, "transition":"easeInOutE
 ```
 
 
-## 豊富なアニメーション関数
+## 指定可能なパラメータ
 
 
 
@@ -32,4 +32,6 @@ GLDTween.addTween(myView, {"duration":1.0, "delay":0.0, "transition":"easeInOutE
   <dd>アニメーション開始までの遅延（秒）</dd>
   <dt>transition:String</dt>
   <dd>イージングカーブ（後述）の指定</dd>
+  <dt>その他</dt>
+  <dd>CGFloat、CGPoint、CGRect、CGSize、CAAffineTransform、UIColor型の、NSObjectのプロパティは、プロパティ名でそのまま指定可能。</dd>
 </dl>
