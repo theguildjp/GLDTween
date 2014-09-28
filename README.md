@@ -32,6 +32,16 @@ GLDTween.addTween(myView, {"duration":1.0, "delay":0.0, "transition":"easeInOutE
   <dd>アニメーション開始までの遅延（秒）</dd>
   <dt>transition:String</dt>
   <dd>イージングカーブ（後述）の指定</dd>
+  <dt>x</dt>
+  <dt>x</dt>
+  <dt>width</dt>
+  <dt>height</dt>
+  <dt>centerX</dt>
+  <dt>centerY</dt>
+  <dt>frame</dt>
+  <dt>center</dt>
+  <dt>frame.origin</dt>
+  <dt>frame.size</dt>
   <dt>その他</dt>
   <dd>CGFloat、CGPoint、CGRect、CGSize、CAAffineTransform、UIColor型の、NSObjectのプロパティは、プロパティ名でそのまま指定可能。</dd>
 </dl>
