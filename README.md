@@ -23,3 +23,13 @@ GLDTween.addTween(myView, {"duration":1.0, "delay":0.0, "transition":"easeInOutE
 
 ## 豊富なアニメーション関数
 
+
+
+<dl>
+  <dt>duration:Double</dt>
+  <dd>アニメーションの再生時間（秒）</dd>
+  <dt>delay:Double</dt>
+  <dd>アニメーション開始までの遅延（秒）</dd>
+  <dt>transition:String</dt>
+  <dd>イージングカーブ（後述）の指定</dd>
+</dl>
