@@ -49,7 +49,7 @@ GLDTween.addTween(myView, {"duration":1.0, "delay":0.0, "transition":"easeInOutE
   <dt>centerX:Double</dt>
   <dt>centerY:Double</dt>
   <dt>その他</dt>
-  <dd>CGFloat、CGPoint、CGRect、CGSize、CAAffineTransform、UIColor型の、NSObjectのプロパティはプロパティ名でそのまま指定可能（例えばalpha等）。</dd>
+  <dd>CGFloat型のNSObjectのプロパティはプロパティ名でそのまま指定可能（例えばalpha等）。</dd>
 </dl>
 
 
