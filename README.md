@@ -33,8 +33,11 @@ GLDTween.addTween(myView, {"duration":1.0, "delay":0.0, "transition":"easeInOutE
   <dt>transition:String</dt>
   <dd>イージングカーブ（後述）の指定</dd>
   <dt>x</dt>
-  <dt>x</dt>
+  <dd>frame.origin.xのショートカット</dd>
+  <dt>y</dt>
+  <dd>frame.origin.yのショートカット</dd>
   <dt>width</dt>
+  <dd>frame.size.widthのショートカット</dd>
   <dt>height</dt>
   <dt>centerX</dt>
   <dt>centerY</dt>
@@ -43,5 +46,5 @@ GLDTween.addTween(myView, {"duration":1.0, "delay":0.0, "transition":"easeInOutE
   <dt>frame.origin</dt>
   <dt>frame.size</dt>
   <dt>その他</dt>
-  <dd>CGFloat、CGPoint、CGRect、CGSize、CAAffineTransform、UIColor型の、NSObjectのプロパティは、プロパティ名でそのまま指定可能。</dd>
+  <dd>CGFloat、CGPoint、CGRect、CGSize、CAAffineTransform、UIColor型の、NSObjectのプロパティはプロパティ名でそのまま指定可能（例えばalpha等）。</dd>
 </dl>
