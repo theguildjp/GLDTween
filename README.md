@@ -14,8 +14,12 @@ GLDTweenはそれらの問題を解決し、複雑なアニメーションをシ
 
 例えば、viewの移動をする場合、以下のように1行で書けます。
 
-#サンプル
+##サンプル
 
 ```
 GLDTween.addTween(myView, {"duration":1.0, "delay":0.0, "transition":"easeInOutExpo", "center":CGPoint(x:100,y:400)})
 ```
+
+
+## 豊富なアニメーション関数
+
