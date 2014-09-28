@@ -32,19 +32,29 @@ GLDTween.addTween(myView, {"duration":1.0, "delay":0.0, "transition":"easeInOutE
   <dd>アニメーション開始までの遅延（秒）</dd>
   <dt>transition:String</dt>
   <dd>イージングカーブ（後述）の指定</dd>
-  <dt>x</dt>
-  <dd>frame.origin.xのショートカット</dd>
-  <dt>y</dt>
-  <dd>frame.origin.yのショートカット</dd>
-  <dt>width</dt>
-  <dd>frame.size.widthのショートカット</dd>
-  <dt>height</dt>
-  <dt>centerX</dt>
-  <dt>centerY</dt>
-  <dt>frame</dt>
-  <dt>center</dt>
-  <dt>frame.origin</dt>
-  <dt>frame.size</dt>
+  <dt>x:Double</dt>
+  <dd>frame.origin.xの省略記法</dd>
+  <dt>y:Double</dt>
+  <dd>frame.origin.yの省略記法</dd>
+  <dt>width:Double</dt>
+  <dd>frame.size.widthの省略記法</dd>
+  <dt>height:Double</dt>
+  <dd>frame.size.heightの省略記法</dd>
+  <dt>frame:CGRect</dt>
+  <dd></dd>
+  <dt>frame.origin:CGPoint</dt>
+  <dd></dd>
+  <dt>frame.size:CGSize</dt>
+  <dt>center:CGPoint</dt>
+  <dt>centerX:Double</dt>
+  <dt>centerY:Double</dt>
   <dt>その他</dt>
   <dd>CGFloat、CGPoint、CGRect、CGSize、CAAffineTransform、UIColor型の、NSObjectのプロパティはプロパティ名でそのまま指定可能（例えばalpha等）。</dd>
 </dl>
+
+
+## 対応予定
+
+- CGAffineTransform
+- CATransform3D
+- UIColor
