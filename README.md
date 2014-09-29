@@ -58,9 +58,10 @@ GLDTween.addTween(myView, {"duration":3.0, "delay":0.5, "transition":"EaseInOutE
 </dl>
 
 
-## 対応予定
-以下の型の全てのプロパティに対応予定
+## 対応プロパティ・データタイプ
+アニメーション対象となるNSObjectが直接保持する下記データタイプに対応。
 
+- CGFloat
 - CGPoint
 - CGSize
 - CGRect
