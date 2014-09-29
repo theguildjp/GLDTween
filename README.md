@@ -59,12 +59,22 @@ GLDTween.addTween(myView, {"duration":3.0, "delay":0.5, "transition":"EaseInOutE
 
 
 ## 対応プロパティ・データタイプ
-アニメーション対象となるNSObjectが直接保持する下記データタイプに対応。
+アニメーション対象として指定したNSObjectサブクラスから、valueForKeyで取得できる下記型のプロパティに対応しています。
 
-- CGFloat
-- CGPoint
-- CGSize
-- CGRect
-- CGAffineTransform
-- CATransform3D
-- UIColor
+<dl>
+  <dt>CGFloat</dt>
+  <dd>UIView.alpha等</dd>
+  <dt>CGPoint</dt>
+  <dd>UIView.center、CALayer.position等</dd>
+  <dt>CGSize</dt>
+  <dd>UIScrollView.contentSize等</dd>
+  <dt>CGRect</dt>
+  <dd>UIView.frame等</dd>
+  <dt>CGAffineTransform</dt>
+  <dd>UIView.transform等</dd>
+  <dt>CATranform3D</dt>
+  <dd>CALayer.transform等</dd>
+  <dt>UIColor</dt>
+  <dd>UIView.backgroundColor等</dd>
+</dl>
+
