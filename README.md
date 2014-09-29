@@ -27,7 +27,7 @@ GLDTween.addTween(myView, {"duration":3.0, "delay":0.5, "transition":"EaseInOutE
 ```
 
 ## 指定可能なパラメータ
-
+アニメーションのパラメータは、GLDTween.addTweenの第2引数で指定します。第2引数は<String, Any>型のDictionaryで、あらゆるデータ型を内包可能です。
 
 
 <dl>
