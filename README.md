@@ -23,7 +23,7 @@ GLDTween.addTween(myView, {"duration":1.0, "transition":"EaseInOutExpo", "center
 
 ###UIViewの大きさを変形させる。0.5秒後にアニメーションを開始し3秒で変形。
 ```
-GLDTween.addTween(myView, {"duration":1.0, "delay":0.5, "transition":"EaseInOutExpo", "frame":CGRect(x:100,y:400,width:50,height:50)})
+GLDTween.addTween(myView, {"duration":3.0, "delay":0.5, "transition":"EaseInOutExpo", "frame":CGRect(x:100,y:400,width:50,height:50)})
 ```
 
 ## 指定可能なパラメータ
