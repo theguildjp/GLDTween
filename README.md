@@ -53,6 +53,10 @@ GLDTween.addTween(myView, {"duration":3.0, "delay":0.5, "transition":"EaseInOutE
   <dt>center:CGPoint</dt>
   <dt>centerX:Double</dt>
   <dt>centerY:Double</dt>
+  <dt>Start:GLDTweenClosure</dt>
+  <dd>アニメーション開始時に実行されるクロージャ。クロージャをDictionaryに入れられるよう、GLDTweenClosureクラスでラップをすること。</dd>
+  <dt>Completion:GLDTweenClosure</dt>
+  <dd>アニメーション終了時に実行されるクロージャ。クロージャをDictionaryに入れられるよう、GLDTweenClosureクラスでラップをすること。</dd>
   <dt>その他</dt>
   <dd>CGFloat型のNSObjectのプロパティはプロパティ名でそのまま指定可能（例えばalpha等）。</dd>
 </dl>
