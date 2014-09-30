@@ -37,6 +37,8 @@ GLDTween.addTween(myView, {"duration":3.0, "delay":0.5, "transition":"EaseInOutE
   <dd>アニメーション開始までの遅延（秒）</dd>
   <dt>transition:String</dt>
   <dd>イージングカーブ（後述）の指定</dd>
+  <dt>repeat</dt>
+  <dd>繰り返し回数。ディフォルトは0。completeクロージャは繰り返しが全て終わった時に呼ばれる</dd>
   <dt>x:Double</dt>
   <dd>frame.origin.xの省略記法</dd>
   <dt>y:Double</dt>
