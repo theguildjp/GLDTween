@@ -130,8 +130,8 @@ class GLDTweenCastHelperCGSize: NSObject, GLDTweenCastHelper {
         let _v1:CGSize = v1 as CGSize
         let bw:Double = Double(_v0.width)
         let bh:Double = Double(_v0.height)
-        let cw:Double = Double(_v1.width - _v0.height)
-        let ch:Double = Double(_v1.width - _v0.height)
+        let cw:Double = Double(_v1.width - _v0.width)
+        let ch:Double = Double(_v1.height - _v0.height)
         let destW:Double = easing.calc(t, b: bw, c: cw, d: d)
         let destH:Double = easing.calc(t, b: bh, c: ch, d: d)
         return CGSize(width:destW, height:destH)

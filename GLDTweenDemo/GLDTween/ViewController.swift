@@ -22,17 +22,18 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         var t:CGAffineTransform = CGAffineTransformIdentity
         t = CGAffineTransformRotate(t, 45*3.14/180.0)
+        var b:UIView = box;
         GLDTween.addTween(box,
             ["duration":1,
-                "delay":0,
-                "easing":GLDEaseTypeInOutExpo,
-                "alpha":0.0,
-                "center":CGPoint(x:100,y:400),
+                "delay":0.0,
+                "easing":GLDEaseTypeInExpo,
+                //"alpha":0.0,
+                //"center":CGPoint(x:100,y:400),
                 "frame":CGRect(x: 200, y: 55, width: 10, height: 200),
-                "backgroundColor": UIColor.blackColor(),
-                "centerX":300,
-                "z":200,
-                "transform": t,
+                //"backgroundColor": UIColor.blueColor(),
+                //"size":CGSize(width:100,height:10),
+                //"x":300,
+                //"transform": t,
                 "start":GLDTweenClosure{
                     println("start closure")
                 },
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
                     println("stop closure")
             }])
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

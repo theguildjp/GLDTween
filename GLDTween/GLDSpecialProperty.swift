@@ -226,6 +226,7 @@ class GLDSpecialPropertySize: NSObject, GLDSpecialPropertyProxy{
     
     func set(target:AnyObject, value:Any){
         if(target is UIView){
+            println("CGSize Setter \(value)")
             (target as UIView).frame.size = value as CGSize
         }else if target is CALayer{
             (target as CALayer).frame.size = value as CGSize
