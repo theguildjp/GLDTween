@@ -89,3 +89,5 @@ GLDTween.addTween(myView, {"duration":3.0, "delay":0.5, "transition":"EaseInOutE
 - リピート
 - オートリバース？
 - アニメーション中に同じターゲットのアニメーションをOverWrite
+- アップデート時クロージャ
+- 削除時クロージャ
