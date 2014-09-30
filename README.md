@@ -82,3 +82,10 @@ GLDTween.addTween(myView, {"duration":3.0, "delay":0.5, "transition":"EaseInOutE
   <dd>UIView.backgroundColor等</dd>
 </dl>
 
+
+
+#対応予定機能
+
+- リピート
+- オートリバース？
+- アニメーション中に同じターゲットのアニメーションをOverWrite
