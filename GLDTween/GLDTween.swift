@@ -21,7 +21,7 @@ public enum GLDTweenReservedProperty:String{
 
 public class GLDTween: NSObject {
     // MARK: - Props
-    let reservedPropName:Dictionary<String,Bool> = ["duration":true, "delay":true, "rounded":true, "easing":true, "start":true, "completion":true]
+    let reservedPropName:Dictionary<String,Bool> = ["duration":true, "delay":true, "rounded":true, "easing":true, "start":true, "completion":true, "repeat":true]
     let framerate:Double = 60.0
     let defaultEasing:String = GLDEaseTypeNone
     var currentTime:Double = 0
@@ -118,6 +118,7 @@ public class GLDTween: NSObject {
     private func addTween(target:NSObject, params:Dictionary<String, Any>){
         let duration:Double = (params["duration"] != nil) ? convertDouble(params["duration"]!) : 0.0
         let delay:Double = (params["delay"] != nil) ? convertDouble(params["delay"]!) : 0.0
+        let repeat:Int = (params["repeat"] != nil) ? params["repeat"]! as Int : 0
         
         var tweenData:GLDTweenData = GLDTweenData()
         tweenData.target = target
@@ -125,6 +126,7 @@ public class GLDTween: NSObject {
         //遅延の登録
         tweenData.timeStart = self.currentTime + delay
         tweenData.timeComplete = self.currentTime + delay + duration
+        tweenData.repeat = repeat
 
         //イージング関数の登録
         if let ieExist = params["easing"]{
@@ -549,6 +551,15 @@ public class GLDTween: NSObject {
         }
         
         if hasCompleted == true{
+            if tween.repeat>0 {
+                //Repeatが0以上なら
+                tween.repeat--
+                tween.hasCompleted = false
+                tween.timeComplete = (tween.timeComplete - tween.timeStart) + self.currentTime
+                tween.timeStart = self.currentTime
+                return true
+            }
+            
             //Tweenの完了
             //Completionセレクター／クロージャの実行
             if let isExist = tween.completion {

@@ -39,6 +39,7 @@ let GLDEaseTypeInBack = "EaseInBack"
 let GLDEaseTypeOutBack = "EaseOutBack"
 let GLDEaseTypeInOutBack = "EaseInOutBack"
 
+
 /*
 アニメーション関数をオブジェクト化したクラス。
 イージングカーブ毎にGLDTransitionを継承したクラス作成する。

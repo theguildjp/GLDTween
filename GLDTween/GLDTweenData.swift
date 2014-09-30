@@ -9,21 +9,7 @@
 import UIKit
 
 
-/**
-GLDTweenで引数としてクロージャを渡すためのラッパー構造体
-*/
-struct GLDTweenClosure{
-    typealias GLDTweenClosureContainer = () -> Void
-    let closure:GLDTweenClosureContainer
-    
-    init(closure:() -> Void){
-        self.closure = closure
-    }
-    
-    func execute(){
-        self.closure()
-    }
-}
+
 
 
 
@@ -45,7 +31,8 @@ class GLDTweenData: NSObject {
     var start:(()->Void)?
     var completion:(()->Void)?  //完了時に実行するクロージャ
     
-    var rounded:Bool = false    //値の小数点を四捨五入するか
+    var rounded:Bool = false    //値の小数点を四捨五入するか（未対応）
+    var repeat:Int = 0
     
     //状態フラグ
     var isPaused:Bool = false       //ポーズ中かどうか？
@@ -56,5 +43,22 @@ class GLDTweenData: NSObject {
     override init(){
         super.init()
         self.properties = Dictionary()
+    }
+}
+
+
+/**
+GLDTweenで引数としてクロージャを渡すためのラッパー構造体
+*/
+struct GLDTweenClosure{
+    typealias GLDTweenClosureContainer = () -> Void
+    let closure:GLDTweenClosureContainer
+    
+    init(closure:() -> Void){
+        self.closure = closure
+    }
+    
+    func execute(){
+        self.closure()
     }
 }

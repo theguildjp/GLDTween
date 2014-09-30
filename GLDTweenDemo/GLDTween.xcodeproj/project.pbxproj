@@ -130,15 +130,31 @@
 		3D59FF2919D5064100A12CAB /* GLDTween */ = {
 			isa = PBXGroup;
 			children = (
-				3DAE9D0019DA2F4C003692A1 /* GLDEasingFunction.swift */,
-				3DAE9D0119DA2F4C003692A1 /* GLDSpecialProperty.swift */,
 				3DAE9D0219DA2F4C003692A1 /* GLDTween.swift */,
-				3DAE9D0319DA2F4C003692A1 /* GLDTweenCastHelper.swift */,
+				3DAE9D0F19DAAC1C003692A1 /* plugin */,
+				3DAE9D0E19DAAC0F003692A1 /* internal */,
+			);
+			name = GLDTween;
+			sourceTree = "<group>";
+		};
+		3DAE9D0E19DAAC0F003692A1 /* internal */ = {
+			isa = PBXGroup;
+			children = (
 				3DAE9D0419DA2F4C003692A1 /* GLDTweenData.swift */,
 				3DAE9D0519DA2F4C003692A1 /* GLDTweenProperty.swift */,
 				3DAE9D0619DA2F4C003692A1 /* GLDTweenUtil.swift */,
 			);
-			name = GLDTween;
+			name = internal;
+			sourceTree = "<group>";
+		};
+		3DAE9D0F19DAAC1C003692A1 /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE9D0019DA2F4C003692A1 /* GLDEasingFunction.swift */,
+				3DAE9D0319DA2F4C003692A1 /* GLDTweenCastHelper.swift */,
+				3DAE9D0119DA2F4C003692A1 /* GLDSpecialProperty.swift */,
+			);
+			name = plugin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

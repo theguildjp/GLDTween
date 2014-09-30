@@ -7,16 +7,10 @@
 #
 
 Pod::Spec.new do |s|
-
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  These will help people to find your library, and whilst it
-  #  can feel like a chore to fill in it's definitely to your advantage. The
-  #  summary should be tweet-length, and the description more in depth.
-  #
-
   s.name         = "GLDTween"
   s.version      = "0.0.1"
+  s.platform     = :ios, "7.0"
+  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.summary      = "Fancy Animation Engine for iOS written with Swift"
 
   s.description  = <<-DESC
@@ -24,12 +18,12 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://github.com/theguildjp/GLDTween"
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+
 
   s.author             = { "Takayuki Fukatsu" => "fukatsu@gmail.com" }
   s.social_media_url   = "http://twitter.com/fladdict"
 
-  s.platform     = :ios, "7.0"
+
   s.requires_arc = true
 
   s.source       = { :git => "https://github.com/theguildjp/GLDTween.git", :tag => "0.0.1" }
@@ -43,8 +37,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "GLDTween", "GLDTween/**/*.{h,m,swift}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "GLDTween/**/*.{h,m,swift}"
 
 
 
