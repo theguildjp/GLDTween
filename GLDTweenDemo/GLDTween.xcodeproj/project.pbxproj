@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D59FF0A19D5063C00A12CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59FF0919D5063C00A12CAB /* AppDelegate.swift */; };
+		3D59FF0C19D5063C00A12CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59FF0B19D5063C00A12CAB /* ViewController.swift */; };
+		3D59FF0F19D5063C00A12CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D59FF0D19D5063C00A12CAB /* Main.storyboard */; };
+		3D59FF1119D5063C00A12CAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D59FF1019D5063C00A12CAB /* Images.xcassets */; };
+		3D59FF1419D5063C00A12CAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D59FF1219D5063C00A12CAB /* LaunchScreen.xib */; };
+		3D59FF2019D5063D00A12CAB /* GLDTweenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D59FF1F19D5063D00A12CAB /* GLDTweenTests.swift */; };
+		3DAE9D0719DA2F4C003692A1 /* GLDEasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D0019DA2F4C003692A1 /* GLDEasingFunction.swift */; };
+		3DAE9D0819DA2F4C003692A1 /* GLDSpecialProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D0119DA2F4C003692A1 /* GLDSpecialProperty.swift */; };
+		3DAE9D0919DA2F4C003692A1 /* GLDTween.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D0219DA2F4C003692A1 /* GLDTween.swift */; };
+		3DAE9D0A19DA2F4C003692A1 /* GLDTweenCastHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D0319DA2F4C003692A1 /* GLDTweenCastHelper.swift */; };
+		3DAE9D0B19DA2F4C003692A1 /* GLDTweenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D0419DA2F4C003692A1 /* GLDTweenData.swift */; };
+		3DAE9D0C19DA2F4C003692A1 /* GLDTweenProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D0519DA2F4C003692A1 /* GLDTweenProperty.swift */; };
+		3DAE9D0D19DA2F4C003692A1 /* GLDTweenUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D0619DA2F4C003692A1 /* GLDTweenUtil.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D59FF1A19D5063C00A12CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D59FEFC19D5063C00A12CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D59FF0319D5063C00A12CAB;
+			remoteInfo = GLDTween;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D59FF0419D5063C00A12CAB /* GLDTween.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLDTween.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D59FF0819D5063C00A12CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D59FF0919D5063C00A12CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D59FF0B19D5063C00A12CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D59FF0E19D5063C00A12CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D59FF1019D5063C00A12CAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3D59FF1319D5063C00A12CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3D59FF1919D5063C00A12CAB /* GLDTweenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLDTweenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D59FF1E19D5063D00A12CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D59FF1F19D5063D00A12CAB /* GLDTweenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GLDTweenTests.swift; sourceTree = "<group>"; };
+		3DAE9D0019DA2F4C003692A1 /* GLDEasingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GLDEasingFunction.swift; path = ../../GLDTween/GLDEasingFunction.swift; sourceTree = "<group>"; };
+		3DAE9D0119DA2F4C003692A1 /* GLDSpecialProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GLDSpecialProperty.swift; path = ../../GLDTween/GLDSpecialProperty.swift; sourceTree = "<group>"; };
+		3DAE9D0219DA2F4C003692A1 /* GLDTween.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GLDTween.swift; path = ../../GLDTween/GLDTween.swift; sourceTree = "<group>"; };
+		3DAE9D0319DA2F4C003692A1 /* GLDTweenCastHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GLDTweenCastHelper.swift; path = ../../GLDTween/GLDTweenCastHelper.swift; sourceTree = "<group>"; };
+		3DAE9D0419DA2F4C003692A1 /* GLDTweenData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GLDTweenData.swift; path = ../../GLDTween/GLDTweenData.swift; sourceTree = "<group>"; };
+		3DAE9D0519DA2F4C003692A1 /* GLDTweenProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GLDTweenProperty.swift; path = ../../GLDTween/GLDTweenProperty.swift; sourceTree = "<group>"; };
+		3DAE9D0619DA2F4C003692A1 /* GLDTweenUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GLDTweenUtil.swift; path = ../../GLDTween/GLDTweenUtil.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D59FF0119D5063C00A12CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D59FF1619D5063C00A12CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D59FEFB19D5063C00A12CAB = {
+			isa = PBXGroup;
+			children = (
+				3D59FF0619D5063C00A12CAB /* GLDTween */,
+				3D59FF1C19D5063C00A12CAB /* GLDTweenTests */,
+				3D59FF0519D5063C00A12CAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D59FF0519D5063C00A12CAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D59FF0419D5063C00A12CAB /* GLDTween.app */,
+				3D59FF1919D5063C00A12CAB /* GLDTweenTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D59FF0619D5063C00A12CAB /* GLDTween */ = {
+			isa = PBXGroup;
+			children = (
+				3D59FF2919D5064100A12CAB /* GLDTween */,
+				3D59FF0D19D5063C00A12CAB /* Main.storyboard */,
+				3D59FF0919D5063C00A12CAB /* AppDelegate.swift */,
+				3D59FF0B19D5063C00A12CAB /* ViewController.swift */,
+				3D59FF1019D5063C00A12CAB /* Images.xcassets */,
+				3D59FF1219D5063C00A12CAB /* LaunchScreen.xib */,
+				3D59FF0719D5063C00A12CAB /* Supporting Files */,
+			);
+			path = GLDTween;
+			sourceTree = "<group>";
+		};
+		3D59FF0719D5063C00A12CAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D59FF0819D5063C00A12CAB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D59FF1C19D5063C00A12CAB /* GLDTweenTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D59FF1F19D5063D00A12CAB /* GLDTweenTests.swift */,
+				3D59FF1D19D5063D00A12CAB /* Supporting Files */,
+			);
+			path = GLDTweenTests;
+			sourceTree = "<group>";
+		};
+		3D59FF1D19D5063D00A12CAB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D59FF1E19D5063D00A12CAB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D59FF2919D5064100A12CAB /* GLDTween */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE9D0019DA2F4C003692A1 /* GLDEasingFunction.swift */,
+				3DAE9D0119DA2F4C003692A1 /* GLDSpecialProperty.swift */,
+				3DAE9D0219DA2F4C003692A1 /* GLDTween.swift */,
+				3DAE9D0319DA2F4C003692A1 /* GLDTweenCastHelper.swift */,
+				3DAE9D0419DA2F4C003692A1 /* GLDTweenData.swift */,
+				3DAE9D0519DA2F4C003692A1 /* GLDTweenProperty.swift */,
+				3DAE9D0619DA2F4C003692A1 /* GLDTweenUtil.swift */,
+			);
+			name = GLDTween;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D59FF0319D5063C00A12CAB /* GLDTween */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D59FF2319D5063D00A12CAB /* Build configuration list for PBXNativeTarget "GLDTween" */;
+			buildPhases = (
+				3D59FF0019D5063C00A12CAB /* Sources */,
+				3D59FF0119D5063C00A12CAB /* Frameworks */,
+				3D59FF0219D5063C00A12CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLDTween;
+			productName = GLDTween;
+			productReference = 3D59FF0419D5063C00A12CAB /* GLDTween.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D59FF1819D5063C00A12CAB /* GLDTweenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D59FF2619D5063D00A12CAB /* Build configuration list for PBXNativeTarget "GLDTweenTests" */;
+			buildPhases = (
+				3D59FF1519D5063C00A12CAB /* Sources */,
+				3D59FF1619D5063C00A12CAB /* Frameworks */,
+				3D59FF1719D5063C00A12CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D59FF1B19D5063C00A12CAB /* PBXTargetDependency */,
+			);
+			name = GLDTweenTests;
+			productName = GLDTweenTests;
+			productReference = 3D59FF1919D5063C00A12CAB /* GLDTweenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D59FEFC19D5063C00A12CAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "THE GUILD";
+				TargetAttributes = {
+					3D59FF0319D5063C00A12CAB = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					3D59FF1819D5063C00A12CAB = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 3D59FF0319D5063C00A12CAB;
+					};
+				};
+			};
+			buildConfigurationList = 3D59FEFF19D5063C00A12CAB /* Build configuration list for PBXProject "GLDTween" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D59FEFB19D5063C00A12CAB;
+			productRefGroup = 3D59FF0519D5063C00A12CAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D59FF0319D5063C00A12CAB /* GLDTween */,
+				3D59FF1819D5063C00A12CAB /* GLDTweenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D59FF0219D5063C00A12CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D59FF0F19D5063C00A12CAB /* Main.storyboard in Resources */,
+				3D59FF1419D5063C00A12CAB /* LaunchScreen.xib in Resources */,
+				3D59FF1119D5063C00A12CAB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D59FF1719D5063C00A12CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D59FF0019D5063C00A12CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DAE9D0C19DA2F4C003692A1 /* GLDTweenProperty.swift in Sources */,
+				3DAE9D0819DA2F4C003692A1 /* GLDSpecialProperty.swift in Sources */,
+				3DAE9D0719DA2F4C003692A1 /* GLDEasingFunction.swift in Sources */,
+				3DAE9D0A19DA2F4C003692A1 /* GLDTweenCastHelper.swift in Sources */,
+				3D59FF0C19D5063C00A12CAB /* ViewController.swift in Sources */,
+				3DAE9D0B19DA2F4C003692A1 /* GLDTweenData.swift in Sources */,
+				3DAE9D0D19DA2F4C003692A1 /* GLDTweenUtil.swift in Sources */,
+				3D59FF0A19D5063C00A12CAB /* AppDelegate.swift in Sources */,
+				3DAE9D0919DA2F4C003692A1 /* GLDTween.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D59FF1519D5063C00A12CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D59FF2019D5063D00A12CAB /* GLDTweenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D59FF1B19D5063C00A12CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D59FF0319D5063C00A12CAB /* GLDTween */;
+			targetProxy = 3D59FF1A19D5063C00A12CAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D59FF0D19D5063C00A12CAB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D59FF0E19D5063C00A12CAB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D59FF1219D5063C00A12CAB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D59FF1319D5063C00A12CAB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D59FF2119D5063D00A12CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D59FF2219D5063D00A12CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D59FF2419D5063D00A12CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GLDTween/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3D59FF2519D5063D00A12CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GLDTween/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3D59FF2719D5063D00A12CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GLDTweenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLDTween.app/GLDTween";
+			};
+			name = Debug;
+		};
+		3D59FF2819D5063D00A12CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GLDTweenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLDTween.app/GLDTween";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D59FEFF19D5063C00A12CAB /* Build configuration list for PBXProject "GLDTween" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D59FF2119D5063D00A12CAB /* Debug */,
+				3D59FF2219D5063D00A12CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D59FF2319D5063D00A12CAB /* Build configuration list for PBXNativeTarget "GLDTween" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D59FF2419D5063D00A12CAB /* Debug */,
+				3D59FF2519D5063D00A12CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D59FF2619D5063D00A12CAB /* Build configuration list for PBXNativeTarget "GLDTweenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D59FF2719D5063D00A12CAB /* Debug */,
+				3D59FF2819D5063D00A12CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D59FEFC19D5063C00A12CAB /* Project object */;
+}
