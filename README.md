@@ -52,6 +52,7 @@ GLDTweenでは任意のNSObjectに対し、NSDictionaryでプロパティのア�
 ```
 [GLDTween addTween:myView 
             params:@{@"duration": @2.0, //時間
+                     @"delay": @0.0
                      @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
                      @"center": [NSValue valueWithCGPoint:CGPointMake(200, 300)] 
             }];
@@ -63,6 +64,7 @@ GLDTweenでは任意のNSObjectに対し、NSDictionaryでプロパティのア�
 ```
 [GLDTween addTween:myView 
             params:@{@"duration": @2.0, //時間
+                   @"delay": @0.0
                    @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
                    @"centerX": @200, //center.xのショートカット
                    @"centerY": @300, //center.yのショートカット
@@ -74,6 +76,7 @@ GLDTweenでは任意のNSObjectに対し、NSDictionaryでプロパティのア�
 ```
 [GLDTween addTween:myView 
             params:@{@"duration": @2.0, //時間
+                   @"delay": @0.0
                    @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
                    @"width": @100,
                    @"height": @100,
@@ -83,6 +86,22 @@ GLDTweenでは任意のNSObjectに対し、NSDictionaryでプロパティのア�
             }];
 ```
 
+
+###右に1秒移動してから下に1秒移動する
+```
+[GLDTween addTween:myView 
+            params:@{@"duration": @1.0, //時間
+                   @"delay": @0.0,
+                   @"easing": GLDEasingTypeEaseInOutExpo,
+                   @"centerX": @200,
+            }];
+[GLDTween addTween:myView 
+            params:@{@"duration": @1.0, //時間
+                   @"delay": @1.0, //1.0秒遅延させて別のアニメを開始
+                   @"easing": GLDEasingTypeEaseInOutExpo, 
+                   @"centerY": @300,
+            }];
+```
 
 
 ## 指定可能なパラメータ
