@@ -29,12 +29,15 @@ GLDTweenのサポートする数値型（float等）のプロパティであれ�
 ## インストール
 
 #### CocoaPods
+[CocoaPods](http://cocoapods.org/)を使っている場合、以下をPodfileに追加します。
 ```
 pod 'GLDTween', '~> 1.0'
 ```
 
-#### Git
-#### Zip
+#### GitあるいはZip
+通常通りダウンロードやPushでインストールしてください。
+ライブラリの依存性としてはQuartzCore.frameworkが必要となります。
+
 
 ## サンプル
 
