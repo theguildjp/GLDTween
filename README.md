@@ -72,6 +72,19 @@ NSValueを用いてラップをすることで、CGPoint、CGSize、CGRect、CGA
             }];
 ```
 
+###アニメーションの削除
+実行中の任意のNSObjectのアニメーションを削除。
+```
+[GLDTween removeTween:myView];
+```
+
+あるいは特定のプロパティのアニメーションだけ削除することも可能です。
+
+```
+[GLDTween removeTween:myView params:@[@"x",@"width"]];
+```
+
+
 
 ###複数のプロパティのアニメーションを同時に行う
 ```
