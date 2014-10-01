@@ -51,8 +51,18 @@ pod 'GLDTween', '~> 1.0'
 [GLDTween addTween:myView params:{
   @"duration": @2.0, //時間
   @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
-  @"centerX": @200,
-  @"centerY": @300,
+  @"center": [NSValue valueWithCGPoint:CGPointMake(200, 300)]; 
+}];
+```
+
+あるいはプリセットのプラグインでCGPointを使わずに、centerX、centerYでも指定できます。
+
+```
+[GLDTween addTween:myView params:{
+  @"duration": @2.0, //時間
+  @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
+  @"centerX": @200, //center.xのショートカット
+  @"centerY": @300, //center.yのショートカット
 }];
 ```
 
