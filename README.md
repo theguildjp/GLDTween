@@ -57,7 +57,8 @@ GLDTweenでは任意のNSObjectに対し、NSDictionaryでプロパティのア�
             }];
 ```
 
-あるいはプリセットのプラグインでCGPointを使わずに、centerX、centerYでも指定できます。
+
+あるいは標準プラグインの力で、CGPointのかわりにcenterX、centerYでも指定できます。
 
 ```
 [GLDTween addTween:myView 
@@ -68,10 +69,21 @@ GLDTweenでは任意のNSObjectに対し、NSDictionaryでプロパティのア�
             }];
 ```
 
-###UIViewの大きさを変形させる。0.5秒後にアニメーションを開始し3秒で変形。
+
+###複数のプロパティのアニメーションを同時に行う
 ```
-GLDTween.addTween(myView, {"duration":3.0, "delay":0.5, "transition":"EaseInOutExpo", "frame":CGRect(x:100,y:400,width:50,height:50)})
+[GLDTween addTween:myView 
+            params:@{@"duration": @2.0, //時間
+                   @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
+                   @"width": @100, //frame.origin.xのショートカット
+                   @"height": @100, //frame.origin.yのショートカット
+                   @"centerX": @200, //center.xのショートカット
+                   @"centerY": @300, //center.yのショートカット
+                   @"alpha": @0.0 //フェードアウト
+            }];
 ```
+
+
 
 ## 指定可能なパラメータ
 アニメーションのパラメータは、GLDTween.addTweenの第2引数で指定します。第2引数は<String, Any>型のDictionaryで、あらゆるデータ型を内包可能です。
