@@ -91,15 +91,17 @@ NSValueを用いてラップをすることで、CGPoint、CGSize、CGRect、CGA
 ###右に1秒移動してから下に1秒移動する
 2つのアニメーションと、delayのパラメータ指定で連続的なアニメーションも記述できます。
 ```
+//右に移動
 [GLDTween addTween:myView 
             params:@{@"duration": @1.0, //時間
                    @"delay": @0.0,
                    @"easing": GLDEasingTypeEaseInOutExpo,
                    @"centerX": @200,
             }];
+//下に移動
 [GLDTween addTween:myView 
             params:@{@"duration": @1.0, //時間
-                   @"delay": @1.0, //1.0秒遅延させて別のアニメを開始
+                   @"delay": @1.0, //1.0秒遅延させて実行
                    @"easing": GLDEasingTypeEaseInOutExpo, 
                    @"centerY": @300,
             }];
