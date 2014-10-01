@@ -47,6 +47,7 @@ pod 'GLDTween', '~> 1.0'
 ##サンプル
 
 GLDTweenでは任意のNSObjectに対し、NSDictionaryでプロパティのアニメーションを指定します。
+NSValueを用いてラップをすることで、CGPoint、CGSize、CGRect、CGAffineTransformなどのプロパティも指定可能です。
 
 ###UIViewを座標(200,300)に2秒で移動させる。
 ```
