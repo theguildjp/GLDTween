@@ -47,7 +47,8 @@ pod 'GLDTween', '~> 1.0'
 GLDTweenでは任意のNSObjectに対し、NSDictionaryでプロパティのアニメーションを指定します。
 NSValueを用いてラップをすることで、CGPoint、CGSize、CGRect、CGAffineTransformなどのプロパティも指定可能です。
 
-###UIViewを座標(200,300)に2秒で移動させる。
+###アニメーションを開始
+UIViewを座標(200,300)に2秒で移動させる。
 ```
 [GLDTween addTween:myView 
             params:@{@"duration": @2.0, //時間
@@ -76,7 +77,7 @@ NSValueを用いてラップをすることで、CGPoint、CGSize、CGRect、CGA
 [GLDTween removeTween:myView];
 ```
 
-あるいは特定のプロパティのアニメーションだけ削除することも可能です。
+あるいは特定のプロパティのアニメーションだけ削除することも可能。
 
 ```
 [GLDTween removeTween:myView params:@[@"x",@"width"]];
@@ -84,7 +85,7 @@ NSValueを用いてラップをすることで、CGPoint、CGSize、CGRect、CGA
 
 
 
-###複数のプロパティのアニメーションを同時に行う
+###複数のプロパティを同時にアニメーション
 ```
 [GLDTween addTween:myView 
             params:@{@"duration": @2.0, //時間
@@ -98,9 +99,18 @@ NSValueを用いてラップをすることで、CGPoint、CGSize、CGRect、CGA
             }];
 ```
 
+###複数のオブジェクトに同じ動きをさせる。
+パラメータの辞書を再利用することで、同じアニメーションを複数のNSObjectに適用できます。
+```
+[GLDTween addTween:myView0 params:myDict}];
+[GLDTween addTween:myView1 params:myDict}];
+[GLDTween addTween:myView2 params:myDict}];
+```
 
-###右に1秒移動してから下に1秒移動する
-2つのアニメーションと、delayのパラメータ指定で連続的なアニメーションも記述できます。
+
+###連続でアニメーション
+右に1秒移動してから下に1秒移動する。
+2つのアニメーションと、delayのパラメータ指定で連続的なアニメーションも記述できる。
 ```
 //右に移動
 [GLDTween addTween:myView 
