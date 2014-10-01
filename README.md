@@ -1,7 +1,8 @@
 GLDTween
 ========
 
-## 概要
+## ライブラリについて
+### 概要
 GLDTweenはiOS用のハンディなアニメーションエンジンです。
 
 GLDTweenはAdobe Flashの伝説的なアニメーションエンジンTweenerをベースに設計されています。
