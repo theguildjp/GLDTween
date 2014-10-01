@@ -46,24 +46,26 @@ pod 'GLDTween', '~> 1.0'
 
 ##サンプル
 
+GLDTweenでは任意のNSObjectに対し、NSDictionaryでプロパティのアニメーションを指定します。
+
 ###UIViewを座標(200,300)に2秒で移動させる。
 ```
-[GLDTween addTween:myView params:{
-  @"duration": @2.0, //時間
-  @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
-  @"center": [NSValue valueWithCGPoint:CGPointMake(200, 300)]; 
-}];
+[GLDTween addTween:myView 
+            params:@{@"duration": @2.0, //時間
+                     @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
+                     @"center": [NSValue valueWithCGPoint:CGPointMake(200, 300)] 
+            }];
 ```
 
 あるいはプリセットのプラグインでCGPointを使わずに、centerX、centerYでも指定できます。
 
 ```
-[GLDTween addTween:myView params:{
-  @"duration": @2.0, //時間
-  @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
-  @"centerX": @200, //center.xのショートカット
-  @"centerY": @300, //center.yのショートカット
-}];
+[GLDTween addTween:myView 
+            params:@{@"duration": @2.0, //時間
+                   @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
+                   @"centerX": @200, //center.xのショートカット
+                   @"centerY": @300, //center.yのショートカット
+            }];
 ```
 
 ###UIViewの大きさを変形させる。0.5秒後にアニメーションを開始し3秒で変形。
