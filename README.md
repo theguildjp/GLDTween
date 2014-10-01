@@ -46,9 +46,14 @@ pod 'GLDTween', '~> 1.0'
 
 ##サンプル
 
-###UIViewのCenterを1秒で移動させる。
+###UIViewを座標(200,300)に2秒で移動させる。
 ```
-GLDTween.addTween(myView, {"duration":1.0, "transition":"EaseInOutExpo", "center":CGPoint(x:100,y:400)})
+[GLDTween addTween:myView params:{
+  @"duration": @2.0, //時間
+  @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
+  @"centerX": @200,
+  @"centerY": @300,
+}];
 ```
 
 ###UIViewの大きさを変形させる。0.5秒後にアニメーションを開始し3秒で変形。
