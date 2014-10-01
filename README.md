@@ -75,11 +75,11 @@ GLDTweenでは任意のNSObjectに対し、NSDictionaryでプロパティのア�
 [GLDTween addTween:myView 
             params:@{@"duration": @2.0, //時間
                    @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
-                   @"width": @100, //frame.origin.xのショートカット
-                   @"height": @100, //frame.origin.yのショートカット
-                   @"centerX": @200, //center.xのショートカット
-                   @"centerY": @300, //center.yのショートカット
-                   @"alpha": @0.0 //フェードアウト
+                   @"width": @100,
+                   @"height": @100,
+                   @"centerX": @200,
+                   @"centerY": @300,
+                   @"alpha": @0.0
             }];
 ```
 
