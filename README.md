@@ -158,6 +158,39 @@ UIViewを座標(200,300)に2秒で移動させる。
 ```
 
 
+###アニメ開始時、終了時に特殊な処理を行う
+ブロックあるいはセレクターで、イベントハンドリングが可能。ただしNSDictionaryに格納するためにGLDTweenBlockあるいは、GLDTweenSelectorでラップする必要がある。
+
+#####クロージャによるイベント処理
+```
+__weak id s = self;
+[GLDTween addTween:myView 
+            params:@{@"duration": @1.0, //時間
+                   @"delay": @0.0,
+                   @"easing": GLDEasingTypeEaseInOutExpo,
+                   @"startBlock": [GLDTweenBlock block:^(void){
+                        [s animationDidStart:nil]; //ブロック
+                   }],
+                   @"completionBlock": [GLDTweenBlock block:^(void){
+                        [s animationDidComplete:nil]; //ブロック
+                   }]
+            }];
+```
+
+
+#####セレクターによるイベント処理
+```
+[GLDTween addTween:myView 
+            params:@{@"duration": @1.0, //時間
+                   @"delay": @0.0,
+                   @"easing": GLDEasingTypeEaseInOutExpo,
+                   @"startSelector": [GLDTweenSelector selector:@selector(animationDidStart:) withTarget:self],
+                   @"completionSelector": [GLDTweenSelector selector:@selector(animationDidComplete:) withTarget:self]
+            }];
+```
+
+
+
 ## 指定可能なパラメータ
 アニメーションのパラメータは、GLDTween.addTweenの第2引数で指定します。第2引数は<String, Any>型のDictionaryで、あらゆるデータ型を内包可能です。
 
@@ -218,7 +251,7 @@ UIViewを座標(200,300)に2秒で移動させる。
 
 
 
-#対応予定機能
+##対応予定機能
 
 - 無限リピート
 - オートリバース？
