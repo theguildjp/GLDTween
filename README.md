@@ -191,7 +191,7 @@ __weak id s = self;
 
 
 ## 指定可能なアニメーションカーブ
-いわゆるRobert Pennerによる[主要イージング式](http://easings.net/en)は全てサポートしています。
+いわゆるRobert Pennerによる[主要アニメーションカーブ](http://easings.net/en)は全てサポートしています。
 
 
 ## 指定可能なパラメータ
