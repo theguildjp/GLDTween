@@ -196,33 +196,33 @@ __weak id s = self;
 
 
 <dl>
-  <dt>duration:NSNumber</dt>
+  <dt>duration: NSNumber</dt>
   <dd>アニメーションの再生時間（秒）</dd>
-  <dt>delay:NSNumber</dt>
+  <dt>delay: NSNumber</dt>
   <dd>アニメーション開始までの遅延（秒）</dd>
-  <dt>transition:String</dt>
+  <dt>transition: NSString</dt>
   <dd>イージングカーブ（後述）の指定</dd>
-  <dt>repeat:NSNumber</dt>
+  <dt>repeat: NSNumber</dt>
   <dd>繰り返し回数。ディフォルトは0。completeクロージャは繰り返しが全て終わった時に呼ばれる</dd>
-  <dt>x:NSNumber</dt>
+  <dt>x: NSNumber</dt>
   <dd>frame.origin.xの省略記法</dd>
-  <dt>y:NSNumber</dt>
+  <dt>y: NSNumber</dt>
   <dd>frame.origin.yの省略記法</dd>
-  <dt>width:NSNumber</dt>
+  <dt>width: NSNumber</dt>
   <dd>frame.size.widthの省略記法</dd>
-  <dt>height:NSNumber</dt>
+  <dt>height: NSNumber</dt>
   <dd>frame.size.heightの省略記法</dd>
-  <dt>frame:CGRect</dt>
+  <dt>frame: CGRect</dt>
   <dd></dd>
-  <dt>origin:CGPoint</dt>
+  <dt>origin: CGPoint</dt>
   <dd></dd>
-  <dt>size:CGSize</dt>
-  <dt>center:CGPoint</dt>
-  <dt>centerX:Double</dt>
-  <dt>centerY:Double</dt>
-  <dt>startBlock:GLDTweenClosure</dt>
+  <dt>size: CGSize</dt>
+  <dt>center: CGPoint</dt>
+  <dt>centerX: Double</dt>
+  <dt>centerY: Double</dt>
+  <dt>startBlock: GLDTweenClosure</dt>
   <dd>アニメーション開始時に実行されるブロック。GLDTweenBlockでラップをすること。</dd>
-  <dt>completionBlock:GLDTweenClosure</dt>
+  <dt>completionBlock: GLDTweenClosure</dt>
   <dd>アニメーション終了時に実行されるブロック。GLDTweenBlockでラップをすること。</dd>
   <dt>その他</dt>
   <dd>CGFloat、CGPoint、CGSize、CGRect、CGAffineTransform、CATransform3D型のプロパティはそのまま指定可能（例えばalpha等）。</dd>
