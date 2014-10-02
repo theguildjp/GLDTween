@@ -42,7 +42,7 @@ pod 'GLDTween', '~> 1.0'
 
 例えば、viewの移動をする場合、以下のように1行で書けます。
 
-##サンプル
+##サンプルコード
 
 GLDTweenでは任意のNSObjectに対し、NSDictionaryでプロパティのアニメーションを指定します。
 NSValueを用いてラップをすることで、CGPoint、CGSize、CGRect、CGAffineTransformなどのプロパティも指定可能です。
@@ -82,6 +82,35 @@ UIViewを座標(200,300)に2秒で移動させる。
 ```
 [GLDTween removeTween:myView params:@[@"x",@"width"]];
 ```
+
+全てを削除する場合
+```
+[GLDTween removeAllTweens];
+```
+
+
+###アニメーションの一次停止と再開除
+実行中のアニメーションの一時停止
+```
+[GLDTween pauseTween:myView];
+```
+
+一時停止中のアニメーションの再開
+
+```
+[GLDTween resumeTween:myView];
+```
+
+全てを一時停止
+```
+[GLDTween pauseAllTweens];
+```
+
+全ての一時停止を再開
+```
+[GLDTween resumeAllTweens];
+```
+
 
 
 
