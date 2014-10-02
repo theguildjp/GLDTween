@@ -101,13 +101,13 @@ UIViewを座標(200,300)に2秒で移動させる。
 [GLDTween resumeTween:myView];
 ```
 
-全てを一時停止
-```
+
+```全てを一時停止
 [GLDTween pauseAllTweens];
 ```
 
-全ての一時停止を再開
-```
+
+```全ての一時停止を再開
 [GLDTween resumeAllTweens];
 ```
 
