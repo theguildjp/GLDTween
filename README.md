@@ -163,36 +163,36 @@ UIViewを座標(200,300)に2秒で移動させる。
 
 
 <dl>
-  <dt>duration:Double</dt>
+  <dt>duration:NSNumber</dt>
   <dd>アニメーションの再生時間（秒）</dd>
-  <dt>delay:Double</dt>
+  <dt>delay:NSNumber</dt>
   <dd>アニメーション開始までの遅延（秒）</dd>
   <dt>transition:String</dt>
   <dd>イージングカーブ（後述）の指定</dd>
-  <dt>repeat:Int</dt>
+  <dt>repeat:NSNumber</dt>
   <dd>繰り返し回数。ディフォルトは0。completeクロージャは繰り返しが全て終わった時に呼ばれる</dd>
-  <dt>x:Double</dt>
+  <dt>x:NSNumber</dt>
   <dd>frame.origin.xの省略記法</dd>
-  <dt>y:Double</dt>
+  <dt>y:NSNumber</dt>
   <dd>frame.origin.yの省略記法</dd>
-  <dt>width:Double</dt>
+  <dt>width:NSNumber</dt>
   <dd>frame.size.widthの省略記法</dd>
-  <dt>height:Double</dt>
+  <dt>height:NSNumber</dt>
   <dd>frame.size.heightの省略記法</dd>
   <dt>frame:CGRect</dt>
   <dd></dd>
-  <dt>frame.origin:CGPoint</dt>
+  <dt>origin:CGPoint</dt>
   <dd></dd>
-  <dt>frame.size:CGSize</dt>
+  <dt>size:CGSize</dt>
   <dt>center:CGPoint</dt>
   <dt>centerX:Double</dt>
   <dt>centerY:Double</dt>
-  <dt>Start:GLDTweenClosure</dt>
-  <dd>アニメーション開始時に実行される()->Void型クロージャ。クロージャをDictionaryに入れられるよう、GLDTweenClosureクラスでラップをすること。</dd>
-  <dt>Completion:GLDTweenClosure</dt>
-  <dd>アニメーション終了時に実行される()->Voidクロージャ。クロージャをDictionaryに入れられるよう、GLDTweenClosureクラスでラップをすること。</dd>
+  <dt>startBlock:GLDTweenClosure</dt>
+  <dd>アニメーション開始時に実行されるブロック。GLDTweenBlockでラップをすること。</dd>
+  <dt>completionBlock:GLDTweenClosure</dt>
+  <dd>アニメーション終了時に実行されるブロック。GLDTweenBlockでラップをすること。</dd>
   <dt>その他</dt>
-  <dd>CGFloat型のNSObjectのプロパティはプロパティ名でそのまま指定可能（例えばalpha等）。</dd>
+  <dd>CGFloat、CGPoint、CGSize、CGRect、CGAffineTransform、CATransform3D型のプロパティはそのまま指定可能（例えばalpha等）。</dd>
 </dl>
 
 
@@ -212,7 +212,7 @@ UIViewを座標(200,300)に2秒で移動させる。
   <dd>UIView.transform等</dd>
   <dt>CATranform3D</dt>
   <dd>CALayer.transform等</dd>
-  <dt>UIColor</dt>
+  <dt>UIColor（対応予定）</dt>
   <dd>UIView.backgroundColor等</dd>
 </dl>
 
@@ -223,12 +223,11 @@ UIViewを座標(200,300)に2秒で移動させる。
 - 無限リピート
 - オートリバース？
 - アニメーション中に同じターゲットのアニメーションをOverWrite
-- アップデート時クロージャ
-- 削除時クロージャ
 
 
 
-##Known Issue
+##Todo
 
+- コントリビュータを集めること
 - アニメーション中に同じプロパティを再度アニメーションさせると動きが競合する。（上書きを実装すること）
 - TestCaseを書く事
