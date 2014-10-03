@@ -207,7 +207,7 @@ __weak id s = self;
   <dt>transition: NSString</dt>
   <dd>イージングカーブ（後述）の指定</dd>
   <dt>repeat: NSNumber</dt>
-  <dd>繰り返し回数。ディフォルトは0。completeクロージャは繰り返しが全て終わった時に呼ばれる</dd>
+  <dd>繰り返し回数。ディフォルトは0。-1を指定した場合は無限ループ。</dd>
   <dt>x: NSNumber</dt>
   <dd>frame.origin.xの省略記法</dd>
   <dt>y: NSNumber</dt>
@@ -224,10 +224,14 @@ __weak id s = self;
   <dt>center: CGPoint</dt>
   <dt>centerX: Double</dt>
   <dt>centerY: Double</dt>
-  <dt>startBlock: GLDTweenClosure</dt>
+  <dt>startBlock: GLDTweenBlock</dt>
   <dd>アニメーション開始時に実行されるブロック。GLDTweenBlockでラップをすること。</dd>
-  <dt>completionBlock: GLDTweenClosure</dt>
+  <dt>completionBlock: GLDTweenBlock</dt>
   <dd>アニメーション終了時に実行されるブロック。GLDTweenBlockでラップをすること。</dd>
+  <dt>startSelector: GLDTweenSelector</dt>
+  <dd>アニメーション開始時に実行されるセレクター。GLDTweenSelectorでラップをすること。</dd>
+  <dt>completionSelector: GLDTweenSelector</dt>
+  <dd>アニメーション終了時に実行されるセレクター。GLDTweenSelectorでラップをすること。</dd>
   <dt>その他</dt>
   <dd>CGFloat、CGPoint、CGSize、CGRect、CGAffineTransform、CATransform3D型のプロパティはそのまま指定可能（例えばalpha等）。</dd>
 </dl>
@@ -268,10 +272,8 @@ GLDTweenでは以下の2種類のプラグインを作成可能です。
 
 ##対応予定機能
 
-- 無限リピート
 - オートリバース？
 - アニメーション中に同じターゲットのアニメーションをOverWrite
-
 
 
 ##Todo
