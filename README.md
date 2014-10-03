@@ -231,6 +231,10 @@ __weak id s = self;
   <dt>startSelector: GLDTweenSelector</dt>
   <dd>アニメーション開始時に実行されるセレクター。GLDTweenSelectorでラップをすること。</dd>
   <dt>completionSelector: GLDTweenSelector</dt>
+  <dd>アニメーション更新時に実行されるセレクター。GLDTweenBlockでラップをすること。</dd>
+  <dt>updateSelector: GLDTweenSelector</dt>
+  <dd>アニメーションリピート時に実行されるセレクター。GLDTweenBlockでラップをすること。</dd>
+  <dt>repeatSelector: GLDTweenSelector</dt>
   <dd>アニメーション終了時に実行されるセレクター。GLDTweenSelectorでラップをすること。</dd>
   <dt>その他</dt>
   <dd>CGFloat、CGPoint、CGSize、CGRect、CGAffineTransform、CATransform3D型のプロパティはそのまま指定可能（例えばalpha等）。</dd>
