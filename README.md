@@ -115,7 +115,8 @@ UIViewを座標(200,300)に2秒で移動させる。
 
 
 
-###複数のプロパティを同時にアニメーション
+###複数のアニメーション
+#####複数のプロパティを同時に指定
 ```
 [GLDTween addTween:myView 
             params:@{@"duration": @2.0, //時間
@@ -158,6 +159,24 @@ UIViewを座標(200,300)に2秒で移動させる。
             }];
 ```
 
+###アニメーションの上書き、競合
+同じ時間帯にアニメーションが競合する場合、２つ目のアニメーションへ自動で上書きされます。
+下記の２つのアニメーションではXが競合するので、Xのみ2番目のアニメーションが優先されます。
+```
+[GLDTween addTween:myView 
+            params:@{@"duration": @3.0, //時間
+                   @"delay": @0.0,
+                   @"easing": GLDEasingTypeEaseInOutExpo,
+                   @"x": @200,
+                   @"y": @100
+            }];
+[GLDTween addTween:myView 
+            params:@{@"duration": @1.5, //時間
+                   @"delay": @1.0,
+                   @"easing": GLDEasingTypeEaseInOutExpo, 
+                   @"x": @300
+            }];
+```
 
 ###アニメ開始時、終了時に特殊な処理を行う
 ブロックあるいはセレクターで、イベントハンドリングが可能。ただしNSDictionaryに格納するためにGLDTweenBlockあるいは、GLDTweenSelectorでラップする必要がある。
