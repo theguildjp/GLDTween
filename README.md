@@ -227,13 +227,17 @@ __weak id s = self;
   <dt>startBlock: GLDTweenBlock</dt>
   <dd>アニメーション開始時に実行されるブロック。GLDTweenBlockでラップをすること。</dd>
   <dt>completionBlock: GLDTweenBlock</dt>
+  <dd>アニメーション開始時に実行されるブロック。GLDTweenBlockでラップをすること。</dd>
+  <dt>updateBlock: GLDTweenBlock</dt>
+  <dd>アニメーション終了時に実行されるブロック。GLDTweenBlockでラップをすること。</dd>
+  <dt>repeatBlock: GLDTweenBlock</dt>
   <dd>アニメーション終了時に実行されるブロック。GLDTweenBlockでラップをすること。</dd>
   <dt>startSelector: GLDTweenSelector</dt>
   <dd>アニメーション開始時に実行されるセレクター。GLDTweenSelectorでラップをすること。</dd>
   <dt>completionSelector: GLDTweenSelector</dt>
-  <dd>アニメーション更新時に実行されるセレクター。GLDTweenBlockでラップをすること。</dd>
+  <dd>アニメーション更新時に実行されるセレクター。GLDTweenSelectorでラップをすること。</dd>
   <dt>updateSelector: GLDTweenSelector</dt>
-  <dd>アニメーションリピート時に実行されるセレクター。GLDTweenBlockでラップをすること。</dd>
+  <dd>アニメーションリピート時に実行されるセレクター。GLDTweenSelectorでラップをすること。</dd>
   <dt>repeatSelector: GLDTweenSelector</dt>
   <dd>アニメーション終了時に実行されるセレクター。GLDTweenSelectorでラップをすること。</dd>
   <dt>その他</dt>
