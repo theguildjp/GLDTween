@@ -217,8 +217,8 @@ lockInteraction、unlockInteractionパラメータで、アニメーション中
             params:@{@"duration": @1.0, //時間
                    @"delay": @0.0,
                    @"easing": GLDEasingTypeEaseInOutExpo,
-                   @"lockInteraction": @true,
-                   @"unlockInteraction": @true
+                   @"lockInteraction": @true, //追加時に操作系をロック
+                   @"unlockInteraction": @true //完了 or 削除時に操作系をアンロック
             }];
 ```
 
