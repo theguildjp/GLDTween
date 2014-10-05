@@ -209,6 +209,19 @@ __weak id s = self;
             }];
 ```
 
+### アニメーション中の操作ロック
+
+lockInteraction、unlockInteractionパラメータで、アニメーション中のユーザー操作をロックできます。
+```
+[GLDTween addTween:myView 
+            params:@{@"duration": @1.0, //時間
+                   @"delay": @0.0,
+                   @"easing": GLDEasingTypeEaseInOutExpo,
+                   @"lockInteraction": @true,
+                   @"unlockInteraction": @true
+            }];
+```
+
 
 ## 指定可能なアニメーションカーブ
 いわゆるRobert Pennerによる[主要アニメーションカーブ](http://easings.net/en)は全てサポートしています。
@@ -227,6 +240,10 @@ __weak id s = self;
   <dd>イージングカーブ（後述）の指定</dd>
   <dt>repeat: NSNumber</dt>
   <dd>繰り返し回数。ディフォルトは0。-1を指定した場合は無限ループ。</dd>
+  <dt>lockInteraction: BOOL</dt>
+  <dd>アニメーション登録時にユーザーインタラクション（タッチ等）をロック。</dd>
+  <dt>unlockInteraction: BOOL</dt>
+  <dd>アニメーション完了/削除時に、ユーザーインタラクション（タッチ等）をアンロック。</dd>
   <dt>x: NSNumber</dt>
   <dd>frame.origin.xの省略記法</dd>
   <dt>y: NSNumber</dt>
@@ -308,3 +325,7 @@ GLDTweenでは以下の2種類のプラグインを作成可能です。
 - コントリビュータを集めること
 - アニメーション中に同じプロパティを再度アニメーションさせると動きが競合する。（上書きを実装すること）
 - TestCaseを書く事
+
+##Known Issue
+
+- SWIFTから使用する場合、GLDTweenSelectorによるコールバックが正常に作動しません。現段階ではGLDTweenBlockを使用してくだしあ。
