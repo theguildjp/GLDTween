@@ -13,8 +13,7 @@
 
 
 - (id)initWithBlock:(void(^)(void))block {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         self.block = block;
     }
     return self;

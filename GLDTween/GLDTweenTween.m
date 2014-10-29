@@ -16,8 +16,7 @@
 
 
 - (id)init {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         self.properties = [[NSMutableDictionary alloc] initWithCapacity:0];
     }
     return self;

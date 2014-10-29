@@ -487,8 +487,7 @@ static GLDTween *_sharedEngine;
 
 
 - (id)init {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         tweens = [[NSMutableArray alloc] initWithCapacity:100];
         easings = [[NSMutableDictionary alloc] initWithCapacity:10];
         easingNames = [[NSMutableArray alloc] initWithCapacity:10];

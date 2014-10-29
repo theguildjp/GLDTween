@@ -13,8 +13,7 @@
 
 
 - (id)initWithSelector:(SEL)selector target:(NSObject *)target {
-    self = [super init];
-    if (self) {
+    if (self = [super init]) {
         self.selector = selector;
         self.target = target;
     }
