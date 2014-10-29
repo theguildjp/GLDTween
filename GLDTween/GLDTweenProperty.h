@@ -18,14 +18,14 @@
 @property (strong, readonly) NSString *type;
 @property NSValue *startValue;
 @property NSValue *completeValue;
-@property (assign) BOOL rounded;
+@property BOOL rounded;
 
-- (void)setStartValueForTarget:(NSObject*)target key:(NSString*)key;
-- (void)setTweenValueForTarget:(NSObject*)target key:(NSString*)key time:(float)t duration:(float)d ease:(GLDEasing*)ease;
-- (void)setCompleteValueForTarget:(NSObject*)target key:(NSString*)key;
-- (void)updateStartValueForTarget:(NSObject*)target key:(NSString*)key;
-- (void)setValue:(NSValue*)value forTarget:(NSObject*)target key:(NSString*)key;
-- (id)valueForTarget:(NSObject*)target key:(NSString*)key;
+- (void)setStartValueForTarget:(NSObject *)target key:(NSString *)key;
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease;
+- (void)setCompleteValueForTarget:(NSObject *)target key:(NSString *)key;
+- (void)updateStartValueForTarget:(NSObject *)target key:(NSString *)key;
+- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key;
+- (id)valueForTarget:(NSObject *)target key:(NSString *)key;
 
 @end
 

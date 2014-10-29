@@ -16,9 +16,9 @@
  */
 @interface GLDTweenTween : NSObject
 
-@property (nonatomic, strong) NSObject *target;
-@property (nonatomic, strong) NSMutableDictionary *properties;
-@property (nonatomic, strong) NSString *easing;
+@property (strong, nonatomic) NSObject *target;
+@property (strong, nonatomic) NSMutableDictionary *properties;
+@property (strong, nonatomic) NSString *easing;
 @property (nonatomic) int repeat;
 @property (nonatomic) BOOL repeatDelay;
 @property (nonatomic) BOOL rounded;
@@ -40,16 +40,16 @@
 @property (nonatomic) BOOL killFlag;
 
 //Blocks
-@property (nonatomic, strong) GLDTweenBlock *startBlock;
-@property (nonatomic, strong) GLDTweenBlock *updateBlock;
-@property (nonatomic, strong) GLDTweenBlock *repeatBlock;
-@property (nonatomic, strong) GLDTweenBlock *completionBlock;
+@property (strong, nonatomic) GLDTweenBlock *startBlock;
+@property (strong, nonatomic) GLDTweenBlock *updateBlock;
+@property (strong, nonatomic) GLDTweenBlock *repeatBlock;
+@property (strong, nonatomic) GLDTweenBlock *completionBlock;
 
 
 //Selectors
-@property (nonatomic, strong) GLDTweenSelector *startSelector;
-@property (nonatomic, strong) GLDTweenSelector *updateSelector;
-@property (nonatomic, strong) GLDTweenSelector *repeatSelector;
-@property (nonatomic, strong) GLDTweenSelector *completionSelector;
+@property (strong, nonatomic) GLDTweenSelector *startSelector;
+@property (strong, nonatomic) GLDTweenSelector *updateSelector;
+@property (strong, nonatomic) GLDTweenSelector *repeatSelector;
+@property (strong, nonatomic) GLDTweenSelector *completionSelector;
 
 @end
