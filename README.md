@@ -82,7 +82,7 @@ UIViewを座標(200,300)に2秒で移動させる。
 あるいは特定のプロパティのアニメーションだけ削除することも可能です。
 
 ```
-[GLDTween removeTween:myView params:@[@"x",@"width"]];
+[GLDTween removeTween:myView params:@[@"x", @"width"]];
 ```
 
 #####全てを削除する場合

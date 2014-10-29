@@ -218,7 +218,7 @@ NSMutableDictionary *reservedPropertyNames;
         GLDTweenProperty *property;
 
         //NSLog(@"-----------");
-        //NSLog(@"Key %@",key);
+        //NSLog(@"Key %@", key);
         if ([self isReservedPropertyName:key]) {
             //This word is reserved. we don't treat it as animatable property.
             continue;
@@ -435,13 +435,13 @@ NSMutableDictionary *reservedPropertyNames;
             for (NSString*key in keys) {
                 if (tween.properties[key]) {
                     //Remove property from old tween
-                    [self logWarning:[NSString stringWithFormat:@"Duplicated property '%@' was over written.",key]];
+                    [self logWarning:[NSString stringWithFormat:@"Duplicated property '%@' was over written.", key]];
                     [tw.properties removeObjectForKey:key];
                     result = YES;
                 }
             }
             if (tw.properties.count == 0) {
-                //NSLog(@"競合するTween%@を削除 %d",tw, i);
+                //NSLog(@"競合するTween%@を削除 %d", tw, i);
                 [self killTweenByIndex:i];
             }
         }
@@ -786,8 +786,8 @@ NSMutableDictionary *reservedPropertyNames;
 
 
 - (void)logWarning:(NSString *)string {
-    NSString *warning = [NSString stringWithFormat:@"WARNING: %@",string];
-    NSLog(@"%@",warning);
+    NSString *warning = [NSString stringWithFormat:@"WARNING: %@", string];
+    NSLog(@"%@", warning);
 }
 
 

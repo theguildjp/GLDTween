@@ -31,7 +31,7 @@ NSArray* easings;
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenDidToucth:)];
     [self.view addGestureRecognizer:gesture];
     
-    self.box.center = CGPointMake(0,0);
+    self.box.center = CGPointMake(0, 0);
     CGAffineTransform t = CGAffineTransformMakeTranslation(self.view.frame.size.width*0.5, self.view.frame.size.height*0.5);
     self.box.transform = t;
 }
