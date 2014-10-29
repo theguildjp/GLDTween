@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name         = "GLDTween"
   s.version      = "0.0.1"
   s.platform     = :ios, "7.0"
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.summary      = "Fancy Animation Engine for iOS written with Swift"
 
   s.description  = <<-DESC
