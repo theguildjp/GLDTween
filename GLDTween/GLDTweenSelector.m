@@ -8,7 +8,9 @@
 
 #import "GLDTweenSelector.h"
 
+
 @implementation GLDTweenSelector
+
 
 - (id)initWithSelector:(SEL)selector target:(NSObject*)target{
     self = [super init];
@@ -19,10 +21,12 @@
     return self;
 }
 
+
 + (GLDTweenSelector*)selector:(SEL)selector withTarget:(NSObject*)target
 {
     return [[GLDTweenSelector alloc]initWithSelector:selector target:target];
 }
+
 
 - (void)perform{
     if([self.target respondsToSelector:self.selector]){
@@ -32,4 +36,6 @@
         #pragma clang diagnostic pop
     }
 }
+
+
 @end

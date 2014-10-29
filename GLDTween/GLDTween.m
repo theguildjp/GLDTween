@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 THE GUILD. All rights reserved.
 //
 
-
 #import "GLDTween.h"
 #import "GLDTweenProperty.h"
 #import "GLDTweenPropertyPlugin.h"
 #import "GLDEasingPlugin.h"
+
 
 NSString* const GLDEasingTypeEaseNone = @"EaseNone";
 NSString* const GLDEasingTypeEaseInQuad = @"EaseInQuad";
@@ -61,7 +61,9 @@ NSString* const GLDTweenParamRepeatDelay = @"repeatDelay";
 NSString* const GLDTweenParamLockInteraction = @"lockInteraction";
 NSString* const GLDTweenParamUnlockInteraction = @"unlockInteraction";
 
+
 @implementation GLDTween
+
 
 //Time Management
 CADisplayLink *displayLink;
@@ -79,6 +81,7 @@ NSMutableDictionary* reservedPropertyNames;
 
 #pragma mark - Public 
 
+
 /**
  アニメーションの登録。
  
@@ -90,53 +93,66 @@ NSMutableDictionary* reservedPropertyNames;
     return [[GLDTween sharedEngine]addTween:target withParams:params];
 }
 
+
 + (BOOL)removeTween:(NSObject*)target{
     return [[GLDTween sharedEngine]removeTween:target];
 }
+
 
 + (BOOL)removeTweens:(NSArray *)targets{
     return [[GLDTween sharedEngine]removeTweens:targets];
 }
 
+
 + (BOOL)removeTween:(NSObject *)target withProps:(NSArray*)props{
     return [[GLDTween sharedEngine]removeTween:target withProps:props];
 }
+
 
 + (BOOL)removeAllTweens{
     return [[GLDTween sharedEngine]removeAllTweens];
 }
 
+
 + (BOOL)pauseTween:(NSObject*)target{
     return [[GLDTween sharedEngine]pauseTween:target];
 }
+
 
 + (BOOL)pauseTweens:(NSArray *)targets{
     return [[GLDTween sharedEngine]pauseTweens:targets];
 }
 
+
 + (BOOL)pauseAllTweens{
     return [[GLDTween sharedEngine]pauseAllTweens];
 }
+
 
 + (BOOL)resumeTween:(NSObject*)target{
     return [[GLDTween sharedEngine]resumeTween:target];
 }
 
+
 + (BOOL)resumeTweens:(NSArray *)targets{
     return [[GLDTween sharedEngine]resumeTweens:targets];
 }
+
 
 + (BOOL)resumeAllTweens{
     return [[GLDTween sharedEngine]resumeAllTweens];
 }
 
+
 + (NSArray*)easingNames{
     return [[GLDTween sharedEngine] easingNames];
 }
 
+
 + (BOOL)isTweening:(NSObject *)target{
     return [[GLDTween sharedEngine] isTweening:target];
 }
+
 
 /**
  Register custom Easing Curve as plugin.
@@ -148,6 +164,7 @@ NSMutableDictionary* reservedPropertyNames;
 + (BOOL)registerEasingPlugin:(Class)class forKey:(NSString*)key{
     return [[GLDTween sharedEngine] registerEasingPlugin:class forKey:key];
 }
+
 
 /**
  Register custom Property behavior.
@@ -162,6 +179,7 @@ NSMutableDictionary* reservedPropertyNames;
 
 
 #pragma mark - Private Add
+
 
 - (BOOL)addTween:(NSObject*)target withParams:(NSDictionary*)params{
     float duration = [[params objectForKey:GLDTweenParamDuration]floatValue];
@@ -275,7 +293,6 @@ NSMutableDictionary* reservedPropertyNames;
 }
 
 
-
 #pragma mark - Private Pause
 
 
@@ -328,6 +345,7 @@ NSMutableDictionary* reservedPropertyNames;
     return result;
 }
 
+
 - (BOOL)resumeTweens:(NSArray*)targets{
     BOOL result = NO;
     for(int i=0; i<targets.count; i++){
@@ -354,6 +372,7 @@ NSMutableDictionary* reservedPropertyNames;
 
 #pragma mark - Private Remove
 
+
 - (BOOL)removeTween:(NSObject*)target{
     BOOL result = NO;
     for(int i=0; i<tweens.count; i++){
@@ -365,6 +384,7 @@ NSMutableDictionary* reservedPropertyNames;
     }
     return result;
 }
+
 
 - (BOOL)removeTweens:(NSArray*)targets{
     BOOL result = NO;
@@ -455,6 +475,7 @@ NSMutableDictionary* reservedPropertyNames;
 
 
 #pragma mark - Private Init
+
 
 static GLDTween *_sharedEngine;
 + (GLDTween*)sharedEngine{
@@ -559,16 +580,14 @@ static GLDTween *_sharedEngine;
     return YES;
 }
 
+
 - (BOOL)registerReservedPropertyName:(NSString*)name{
     [reservedPropertyNames setObject:@YES forKey:name];
     return YES;
 }
 
 
-
-
 #pragma mark - Private Internal Manipulation
-
 
 
 - (BOOL)pauseTweenByIndex:(int)index{
@@ -580,6 +599,7 @@ static GLDTween *_sharedEngine;
     tween.isPaused = YES;
     return YES;
 }
+
 
 - (BOOL)resumeTweenByIndex:(int)index{
     GLDTweenTween* tween = (GLDTweenTween*)tweens[index];
@@ -593,6 +613,7 @@ static GLDTween *_sharedEngine;
     return YES;
 }
 
+
 - (BOOL)killTweenByIndex:(int)index{
     GLDTweenTween *tween = tweens[index];
     if(tween.unlockInteraction){
@@ -602,14 +623,15 @@ static GLDTween *_sharedEngine;
     return YES;
 }
 
+
 - (BOOL)teardownTween:(GLDTweenTween*)tween{
     [tweens removeObject:tween];
     return YES;
 }
 
 
-
 #pragma mark - Private Update
+
 
 - (void)start{
     if(displayLink){
@@ -619,6 +641,7 @@ static GLDTween *_sharedEngine;
     [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     [self update:nil];
 }
+
 
 - (void)update:(id)sender{
     [self updateTimestamp];
@@ -748,6 +771,7 @@ static GLDTween *_sharedEngine;
     return false;
 }
 
+
 #pragma mark - Private Helper
 
 
@@ -765,7 +789,6 @@ static GLDTween *_sharedEngine;
     NSString *warning = [NSString stringWithFormat:@"WARNING: %@",string];
     NSLog(@"%@",warning);
 }
-
 
 
 @end

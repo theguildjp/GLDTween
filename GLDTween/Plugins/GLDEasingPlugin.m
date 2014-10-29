@@ -8,11 +8,13 @@
 
 #import "GLDEasingPlugin.h"
 
+
 @implementation GLDEasing
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d{
     return 0;
 }
 @end
+
 
 @implementation GLDEasingNone
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d{
@@ -47,6 +49,7 @@
     return -c/2 * (t2*(t2-2) - 1) + b;
 }
 @end
+
 
 @implementation GLDEasingInCubic
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d{
@@ -274,7 +277,6 @@
     return c - val + b;
 }
 @end
-
 
 
 @implementation GLDEasingOutBounce

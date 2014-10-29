@@ -11,7 +11,9 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 
+
 @interface GLDTweenProperty : NSObject
+
 @property (strong) NSString* key;
 @property (strong, readonly) NSString* type;
 @property NSValue* startValue;
@@ -31,17 +33,22 @@
 @interface GLDTweenPropertyCGFloat : GLDTweenProperty
 @end
 
+
 @interface GLDTweenPropertyCGPoint : GLDTweenProperty
 @end
+
 
 @interface GLDTweenPropertyCGSize : GLDTweenProperty
 @end
 
+
 @interface GLDTweenPropertyCGRect : GLDTweenProperty
 @end
 
+
 @interface GLDTweenPropertyCGAffineTransform : GLDTweenProperty
 @end
+
 
 @interface GLDTweenPropertyCATransform3D : GLDTweenProperty
 @end

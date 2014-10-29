@@ -8,10 +8,12 @@
 
 #import "GLDTweenTween.h"
 
+
 /**
  実際のアニメーションを表現するクラス。
  */
 @implementation GLDTweenTween
+
 
 - (id)init{
     self = [super init];

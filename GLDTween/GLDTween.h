@@ -10,10 +10,10 @@
 #import <Foundation/Foundation.h>
 #import <QuartzCore/QuartzCore.h>
 
-
 #import "GLDTweenTween.h"
 #import "GLDTweenBlock.h"
 #import "GLDTweenSelector.h"
+
 
 //Easing Constants
 extern NSString* const GLDEasingTypeEaseNone;
@@ -64,6 +64,7 @@ extern NSString* const GLDTweenParamCompletionBlock;
 extern NSString* const GLDTweenParamRepeatDelay;
 extern NSString* const GLDTweenParamLockInteraction;
 extern NSString* const GLDTweenParamUnlockInteraction;
+
 
 @interface GLDTween : NSObject
 

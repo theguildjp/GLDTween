@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface GLDTweenBlock : NSObject
 
 @property (nonatomic,copy)void (^block)(void);

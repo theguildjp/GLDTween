@@ -11,28 +11,30 @@
 
 @implementation GLDTweenProperty
 
+
 - (void)setValue:(id)value forTarget:(NSObject*)target key:(NSString *)key{
     [target setValue:value forKey:key];
 }
+
 
 - (id)valueForTarget:(NSObject*)target key:(NSString*)key{
     return [target valueForKey:key];
 }
 
 
-//Special setter / getters
-
 - (void)setStartValueForTarget:(NSObject*)target key:(NSString*)key{
     [target setValue:self.startValue forKey:key];
 }
 
+
 - (void)setTweenValueForTarget:(NSObject*)target key:(NSString*)key time:(float)t duration:(float)d ease:(GLDEasing*)ease{
-    
 }
+
 
 - (void)setCompleteValueForTarget:(NSObject*)target key:(NSString*)key{
     [self setValue:self.completeValue forTarget:target key:key];
 }
+
 
 - (void)updateStartValueForTarget:(NSObject *)target key:(NSString *)key{
     self.startValue = [self valueForTarget:target key:key];
@@ -42,13 +44,14 @@
 @end
 
 
-
 //Property wrapper for Number
 @implementation GLDTweenPropertyCGFloat
+
 
 - (NSString*)type{
     return @"CGFloat";
 }
+
 
 - (void)setTweenValueForTarget:(NSObject*)target key:(NSString*)key time:(float)t duration:(float)d ease:(GLDEasing*)ease{
     float b = ((NSNumber*)self.startValue).floatValue;
@@ -57,12 +60,13 @@
     [self setValue:[NSNumber numberWithFloat:val] forTarget:target key:key];
 }
 
-@end
 
+@end
 
 
 //Property wrapper for CGPoint
 @implementation GLDTweenPropertyCGPoint
+
 
 - (NSString*)type{
     return @"CGPoint";
@@ -76,12 +80,14 @@
                                  [ease t:t b:spt.y c:cpt.y - spt.y d:d]);
     [self setValue:[NSValue valueWithCGPoint:destPt] forTarget:target key:key];
 }
-@end
 
+
+@end
 
 
 //Property wrapper for CGSize
 @implementation GLDTweenPropertyCGSize
+
 
 - (NSString*)type{
     return @"CGSize";
@@ -95,12 +101,14 @@
                                [ease t:t b:ssz.y c:csz.y - ssz.y d:d]);
     [self setValue:[NSValue valueWithCGSize:destSz] forTarget:target key:key];
 }
-@end
 
+
+@end
 
 
 //Property wrapper for CGRect
 @implementation GLDTweenPropertyCGRect
+
 
 - (NSString*)type{
     return @"CGRect";
@@ -116,12 +124,14 @@
                                [ease t:t b:src.size.height c:crc.size.height - src.size.height d:d]);
     [self setValue:[NSValue valueWithCGRect:destRc] forTarget:target key:key];
 }
-@end
 
+
+@end
 
 
 //Property wrapper for CGRect
 @implementation GLDTweenPropertyCGAffineTransform
+
 
 - (NSString*)type{
     return @"CGAffineTransform";
@@ -139,12 +149,14 @@
                                                      [ease t:t b:sat.ty c:cat.ty - sat.ty d:d]);
     [self setValue:[NSValue valueWithCGAffineTransform:destAt] forTarget:target key:key];
 }
-@end
 
+
+@end
 
 
 //Property wrapper for CGRect
 @implementation GLDTweenPropertyCATransform3D
+
 
 - (NSString*)type{
     return @"CATransform3D";
@@ -175,4 +187,6 @@
  
     [self setValue:[NSValue valueWithCATransform3D:destT3] forTarget:target key:key];
 }
+
+
 @end

@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 
-
 @interface GLDEasing : NSObject
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end

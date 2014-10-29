@@ -8,7 +8,9 @@
 
 #import "GLDTweenBLock.h"
 
+
 @implementation GLDTweenBlock
+
 
 - (id)initWithBlock:(void(^)(void))block{
     self = [super init];
@@ -18,12 +20,15 @@
     return self;
 }
 
+
 + (GLDTweenBlock*)block:(void(^)(void))block{
     return [[GLDTweenBlock alloc]initWithBlock:block];
 }
 
+
 - (void)execute{
     self.block();
 }
+
 
 @end

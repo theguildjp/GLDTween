@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface TouchDemoViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+
 @property (strong,nonatomic) IBOutlet UIView* box;
 @property (strong,nonatomic) IBOutlet UIPickerView *picker;
+
 @end

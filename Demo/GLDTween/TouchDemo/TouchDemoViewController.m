@@ -9,13 +9,12 @@
 #import "TouchDemoViewController.h"
 #import "GLDTween.h"
 
-@interface TouchDemoViewController ()
-
-@end
 
 @implementation TouchDemoViewController
 
+
 NSArray* easings;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,10 +36,12 @@ NSArray* easings;
     self.box.transform = t;
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (void)screenDidToucth:(UITapGestureRecognizer*)gesture{
     
@@ -64,16 +65,18 @@ NSArray* easings;
 
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    
 }
+
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
 
+
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     return [GLDTween easingNames].count;
 }
+
 
 - (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return [GLDTween easingNames][row];
