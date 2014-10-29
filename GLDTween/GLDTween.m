@@ -731,9 +731,7 @@ NSMutableDictionary *reservedPropertyNames;
         }
     }
     
-    
-    
-    if (willComplete == YES) {
+    if (willComplete) {
         //Repeat
         
         if (tween.repeat != 0) {
