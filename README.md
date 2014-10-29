@@ -301,15 +301,15 @@ lockInteraction、unlockInteractionパラメータで、アニメーション中
 いわゆるRobert Pennerによる[主要アニメーションカーブ](http://easings.net/en)は全てサポートしています。
 
 <ul>
-<li>GLDEasingTypeLinear</li>
-<li>GLDEasingTypeInSine</li>
-<li>GLDEasingTypeOutSine</li>
-<li>GLDEasingTypeInOutSine</li>
-<li>GLDEasingTypeInQuad</li>
-<li>GLDEasingTypeOutQuad</li>
-<li>GLDEasingTypeInOutQuad</li>
-<li>GLDEasingTypeInCubic</li>
-<li>GLDEasingTypeOutCubic</li>
+<li>GLDEaseTypeLinear</li>
+<li>GLDEaseTypeInSine</li>
+<li>GLDEaseTypeOutSine</li>
+<li>GLDEaseTypeInOutSine</li>
+<li>GLDEaseTypeInQuad</li>
+<li>GLDEaseTypeOutQuad</li>
+<li>GLDEaseTypeInOutQuad</li>
+<li>GLDEaseTypeInCubic</li>
+<li>GLDEaseTypeOutCubic</li>
 <li>GLDEasingTypeInOutCubic</li>
 </ul>
 
