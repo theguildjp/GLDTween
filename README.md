@@ -57,7 +57,7 @@ UIViewを座標(200,300)に2秒で移動させる。
 [GLDTween addTween:myView 
             params:@{@"duration": @2.0, //時間
                      @"delay": @0.0
-                     @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
+                     @"easing": GLDEasingInOutExpo, //任意のアニメーションカーブ 
                      @"center": [NSValue valueWithCGPoint:CGPointMake(200, 300)] 
             }];
 ```
@@ -69,7 +69,7 @@ UIViewを座標(200,300)に2秒で移動させる。
 [GLDTween addTween:myView 
             params:@{@"duration": @2.0, //時間
                    @"delay": @0.0
-                   @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
+                   @"easing": GLDEasingInOutExpo, //任意のアニメーションカーブ 
                    @"centerX": @200, //center.xのショートカット
                    @"centerY": @300, //center.yのショートカット
             }];
@@ -124,7 +124,7 @@ UIViewを座標(200,300)に2秒で移動させる。
 [GLDTween addTween:myView 
             params:@{@"duration": @2.0, //時間
                    @"delay": @0.0
-                   @"easing": GLDEasingTypeEaseInOutExpo, //任意のアニメーションカーブ 
+                   @"easing": GLDEasingInOutExpo, //任意のアニメーションカーブ 
                    @"width": @100,
                    @"height": @100,
                    @"centerX": @200,
@@ -150,14 +150,14 @@ UIViewを座標(200,300)に2秒で移動させる。
 [GLDTween addTween:myView 
             params:@{@"duration": @1.0, //時間
                    @"delay": @0.0,
-                   @"easing": GLDEasingTypeEaseInOutExpo,
+                   @"easing": GLDEasingInOutExpo,
                    @"centerX": @200,
             }];
 //下に移動
 [GLDTween addTween:myView 
             params:@{@"duration": @1.0, //時間
                    @"delay": @1.0, //1.0秒遅延させて実行
-                   @"easing": GLDEasingTypeEaseInOutExpo, 
+                   @"easing": GLDEasingInOutExpo, 
                    @"centerY": @300,
             }];
 ```
@@ -169,14 +169,14 @@ UIViewを座標(200,300)に2秒で移動させる。
 [GLDTween addTween:myView 
             params:@{@"duration": @3.0, //時間
                    @"delay": @0.0,
-                   @"easing": GLDEasingTypeEaseInOutExpo,
+                   @"easing": GLDEasingInOutExpo,
                    @"x": @200,
                    @"y": @100
             }];
 [GLDTween addTween:myView 
             params:@{@"duration": @1.5, //時間
                    @"delay": @1.0,
-                   @"easing": GLDEasingTypeEaseInOutExpo, 
+                   @"easing": GLDEasingInOutExpo, 
                    @"x": @300
             }];
 ```
@@ -190,7 +190,7 @@ __weak id s = self;
 [GLDTween addTween:myView 
             params:@{@"duration": @1.0, //時間
                    @"delay": @0.0,
-                   @"easing": GLDEasingTypeEaseInOutExpo,
+                   @"easing": GLDEasingInOutExpo,
                    @"startBlock": [GLDTweenBlock block:^(void){
                         [s animationDidStart:nil]; //ブロック
                    }],
@@ -206,7 +206,7 @@ __weak id s = self;
 [GLDTween addTween:myView 
             params:@{@"duration": @1.0, //時間
                    @"delay": @0.0,
-                   @"easing": GLDEasingTypeEaseInOutExpo,
+                   @"easing": GLDEasingInOutExpo,
                    @"startSelector": [GLDTweenSelector selector:@selector(animationDidStart:) withTarget:self],
                    @"completionSelector": [GLDTweenSelector selector:@selector(animationDidComplete:) withTarget:self]
             }];
@@ -219,7 +219,7 @@ locksInteraction、unlocksInteractionパラメータで、アニメーション�
 [GLDTween addTween:myView 
             params:@{@"duration": @1.0, //時間
                    @"delay": @0.0,
-                   @"easing": GLDEasingTypeEaseInOutExpo,
+                   @"easing": GLDEasingInOutExpo,
                    @"locksInteraction": @YES, //追加時に操作系をロック
                    @"unlocksInteraction": @YES //完了 or 削除時に操作系をアンロック
             }];
