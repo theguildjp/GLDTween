@@ -224,7 +224,7 @@ lockInteraction、unlockInteractionパラメータで、アニメーション中
 ```
 
 ## 指定可能なパラメータ
-アニメーションのパラメータは、GLDTween.addTweenの第2引数で指定します。第2引数は<String, Any>型のDictionaryで、あらゆるデータ型を内包可能です。
+アニメーションのパラメータは、GLDTween.addTweenの第2引数で指定します。第2引数はNSDictionaryで、あらゆるデータ型を内包可能です。
 
 
 <dl>
