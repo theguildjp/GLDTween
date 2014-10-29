@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D5366F519DC31D10017C6B8 /* GLDTweenSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5366F419DC31D10017C6B8 /* GLDTweenSelector.m */; };
+		3D5366F819DC337F0017C6B8 /* GLDTweenBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5366F719DC337F0017C6B8 /* GLDTweenBlock.m */; };
+		3D53670C19DE16270017C6B8 /* TouchDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D53670B19DE16270017C6B8 /* TouchDemoViewController.m */; };
+		3D53675419DEE4550017C6B8 /* GLDEasingPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D53675119DEE4550017C6B8 /* GLDEasingPlugin.m */; };
+		3D53675519DEE4550017C6B8 /* GLDTweenPropertyPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D53675319DEE4550017C6B8 /* GLDTweenPropertyPlugin.m */; };
+		3DAE9D1F19DB9D30003692A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D1E19DB9D30003692A1 /* main.m */; };
+		3DAE9D2219DB9D30003692A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D2119DB9D30003692A1 /* AppDelegate.m */; };
+		3DAE9D2819DB9D30003692A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE9D2619DB9D30003692A1 /* Main.storyboard */; };
+		3DAE9D2A19DB9D30003692A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE9D2919DB9D30003692A1 /* Images.xcassets */; };
+		3DAE9D2D19DB9D30003692A1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE9D2B19DB9D30003692A1 /* LaunchScreen.xib */; };
+		3DAE9D3919DB9D30003692A1 /* GLDTweenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D3819DB9D30003692A1 /* GLDTweenTests.m */; };
+		3DAE9D4519DB9DA0003692A1 /* GLDTween.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D4419DB9DA0003692A1 /* GLDTween.m */; };
+		3DAE9D4D19DBB3C9003692A1 /* GLDTweenProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D4C19DBB3C9003692A1 /* GLDTweenProperty.m */; };
+		3DAE9D5319DBB5EE003692A1 /* GLDTweenTween.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE9D5219DBB5EE003692A1 /* GLDTweenTween.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DAE9D3319DB9D30003692A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DAE9D1119DB9D30003692A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DAE9D1819DB9D30003692A1;
+			remoteInfo = GLDTween;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D5366F319DC31D10017C6B8 /* GLDTweenSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLDTweenSelector.h; path = ../../GLDTween/GLDTweenSelector.h; sourceTree = "<group>"; };
+		3D5366F419DC31D10017C6B8 /* GLDTweenSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLDTweenSelector.m; path = ../../GLDTween/GLDTweenSelector.m; sourceTree = "<group>"; };
+		3D5366F619DC337F0017C6B8 /* GLDTweenBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLDTweenBlock.h; path = ../../GLDTween/GLDTweenBlock.h; sourceTree = "<group>"; };
+		3D5366F719DC337F0017C6B8 /* GLDTweenBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLDTweenBlock.m; path = ../../GLDTween/GLDTweenBlock.m; sourceTree = "<group>"; };
+		3D53670A19DE16270017C6B8 /* TouchDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchDemoViewController.h; path = TouchDemo/TouchDemoViewController.h; sourceTree = "<group>"; };
+		3D53670B19DE16270017C6B8 /* TouchDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchDemoViewController.m; path = TouchDemo/TouchDemoViewController.m; sourceTree = "<group>"; };
+		3D53675019DEE4550017C6B8 /* GLDEasingPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLDEasingPlugin.h; path = ../../GLDTween/Plugins/GLDEasingPlugin.h; sourceTree = "<group>"; };
+		3D53675119DEE4550017C6B8 /* GLDEasingPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLDEasingPlugin.m; path = ../../GLDTween/Plugins/GLDEasingPlugin.m; sourceTree = "<group>"; };
+		3D53675219DEE4550017C6B8 /* GLDTweenPropertyPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLDTweenPropertyPlugin.h; path = ../../GLDTween/Plugins/GLDTweenPropertyPlugin.h; sourceTree = "<group>"; };
+		3D53675319DEE4550017C6B8 /* GLDTweenPropertyPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLDTweenPropertyPlugin.m; path = ../../GLDTween/Plugins/GLDTweenPropertyPlugin.m; sourceTree = "<group>"; };
+		3DAE9D1919DB9D30003692A1 /* GLDTween.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLDTween.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAE9D1D19DB9D30003692A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAE9D1E19DB9D30003692A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DAE9D2019DB9D30003692A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3DAE9D2119DB9D30003692A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3DAE9D2719DB9D30003692A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3DAE9D2919DB9D30003692A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3DAE9D2C19DB9D30003692A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3DAE9D3219DB9D30003692A1 /* GLDTweenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLDTweenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAE9D3719DB9D30003692A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DAE9D3819DB9D30003692A1 /* GLDTweenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLDTweenTests.m; sourceTree = "<group>"; };
+		3DAE9D4319DB9DA0003692A1 /* GLDTween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLDTween.h; path = ../../GLDTween/GLDTween.h; sourceTree = "<group>"; };
+		3DAE9D4419DB9DA0003692A1 /* GLDTween.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLDTween.m; path = ../../GLDTween/GLDTween.m; sourceTree = "<group>"; };
+		3DAE9D4B19DBB3C9003692A1 /* GLDTweenProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLDTweenProperty.h; path = ../../GLDTween/GLDTweenProperty.h; sourceTree = "<group>"; };
+		3DAE9D4C19DBB3C9003692A1 /* GLDTweenProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLDTweenProperty.m; path = ../../GLDTween/GLDTweenProperty.m; sourceTree = "<group>"; };
+		3DAE9D5119DBB5EE003692A1 /* GLDTweenTween.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLDTweenTween.h; path = ../../GLDTween/GLDTweenTween.h; sourceTree = "<group>"; };
+		3DAE9D5219DBB5EE003692A1 /* GLDTweenTween.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLDTweenTween.m; path = ../../GLDTween/GLDTweenTween.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DAE9D1619DB9D30003692A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DAE9D2F19DB9D30003692A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D53670219DD57610017C6B8 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				3D53670919DE160D0017C6B8 /* TouchDemo */,
+			);
+			name = Sample;
+			sourceTree = "<group>";
+		};
+		3D53670919DE160D0017C6B8 /* TouchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3D53670A19DE16270017C6B8 /* TouchDemoViewController.h */,
+				3D53670B19DE16270017C6B8 /* TouchDemoViewController.m */,
+			);
+			name = TouchDemo;
+			sourceTree = "<group>";
+		};
+		3DAE9D1019DB9D30003692A1 = {
+			isa = PBXGroup;
+			children = (
+				3DAE9D1B19DB9D30003692A1 /* GLDTween */,
+				3DAE9D3519DB9D30003692A1 /* GLDTweenTests */,
+				3DAE9D1A19DB9D30003692A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DAE9D1A19DB9D30003692A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE9D1919DB9D30003692A1 /* GLDTween.app */,
+				3DAE9D3219DB9D30003692A1 /* GLDTweenTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DAE9D1B19DB9D30003692A1 /* GLDTween */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE9D4219DB9D8B003692A1 /* GLDTween */,
+				3D53670219DD57610017C6B8 /* Sample */,
+				3DAE9D2019DB9D30003692A1 /* AppDelegate.h */,
+				3DAE9D2119DB9D30003692A1 /* AppDelegate.m */,
+				3DAE9D2619DB9D30003692A1 /* Main.storyboard */,
+				3DAE9D2919DB9D30003692A1 /* Images.xcassets */,
+				3DAE9D2B19DB9D30003692A1 /* LaunchScreen.xib */,
+				3DAE9D1C19DB9D30003692A1 /* Supporting Files */,
+			);
+			path = GLDTween;
+			sourceTree = "<group>";
+		};
+		3DAE9D1C19DB9D30003692A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE9D1D19DB9D30003692A1 /* Info.plist */,
+				3DAE9D1E19DB9D30003692A1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DAE9D3519DB9D30003692A1 /* GLDTweenTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE9D3819DB9D30003692A1 /* GLDTweenTests.m */,
+				3DAE9D3619DB9D30003692A1 /* Supporting Files */,
+			);
+			path = GLDTweenTests;
+			sourceTree = "<group>";
+		};
+		3DAE9D3619DB9D30003692A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE9D3719DB9D30003692A1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DAE9D4219DB9D8B003692A1 /* GLDTween */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE9D4319DB9DA0003692A1 /* GLDTween.h */,
+				3DAE9D4419DB9DA0003692A1 /* GLDTween.m */,
+				3DAE9D4A19DBA6D4003692A1 /* core */,
+				3DAE9D4919DBA11D003692A1 /* plugins */,
+			);
+			name = GLDTween;
+			sourceTree = "<group>";
+		};
+		3DAE9D4919DBA11D003692A1 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				3D53675019DEE4550017C6B8 /* GLDEasingPlugin.h */,
+				3D53675119DEE4550017C6B8 /* GLDEasingPlugin.m */,
+				3D53675219DEE4550017C6B8 /* GLDTweenPropertyPlugin.h */,
+				3D53675319DEE4550017C6B8 /* GLDTweenPropertyPlugin.m */,
+			);
+			name = plugins;
+			sourceTree = "<group>";
+		};
+		3DAE9D4A19DBA6D4003692A1 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE9D5119DBB5EE003692A1 /* GLDTweenTween.h */,
+				3DAE9D5219DBB5EE003692A1 /* GLDTweenTween.m */,
+				3DAE9D4B19DBB3C9003692A1 /* GLDTweenProperty.h */,
+				3DAE9D4C19DBB3C9003692A1 /* GLDTweenProperty.m */,
+				3D5366F319DC31D10017C6B8 /* GLDTweenSelector.h */,
+				3D5366F419DC31D10017C6B8 /* GLDTweenSelector.m */,
+				3D5366F619DC337F0017C6B8 /* GLDTweenBlock.h */,
+				3D5366F719DC337F0017C6B8 /* GLDTweenBlock.m */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DAE9D1819DB9D30003692A1 /* GLDTween */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DAE9D3C19DB9D30003692A1 /* Build configuration list for PBXNativeTarget "GLDTween" */;
+			buildPhases = (
+				3DAE9D1519DB9D30003692A1 /* Sources */,
+				3DAE9D1619DB9D30003692A1 /* Frameworks */,
+				3DAE9D1719DB9D30003692A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLDTween;
+			productName = GLDTween;
+			productReference = 3DAE9D1919DB9D30003692A1 /* GLDTween.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DAE9D3119DB9D30003692A1 /* GLDTweenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DAE9D3F19DB9D30003692A1 /* Build configuration list for PBXNativeTarget "GLDTweenTests" */;
+			buildPhases = (
+				3DAE9D2E19DB9D30003692A1 /* Sources */,
+				3DAE9D2F19DB9D30003692A1 /* Frameworks */,
+				3DAE9D3019DB9D30003692A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DAE9D3419DB9D30003692A1 /* PBXTargetDependency */,
+			);
+			name = GLDTweenTests;
+			productName = GLDTweenTests;
+			productReference = 3DAE9D3219DB9D30003692A1 /* GLDTweenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DAE9D1119DB9D30003692A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "THE GUILD";
+				TargetAttributes = {
+					3DAE9D1819DB9D30003692A1 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					3DAE9D3119DB9D30003692A1 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 3DAE9D1819DB9D30003692A1;
+					};
+				};
+			};
+			buildConfigurationList = 3DAE9D1419DB9D30003692A1 /* Build configuration list for PBXProject "GLDTween" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DAE9D1019DB9D30003692A1;
+			productRefGroup = 3DAE9D1A19DB9D30003692A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DAE9D1819DB9D30003692A1 /* GLDTween */,
+				3DAE9D3119DB9D30003692A1 /* GLDTweenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DAE9D1719DB9D30003692A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DAE9D2819DB9D30003692A1 /* Main.storyboard in Resources */,
+				3DAE9D2D19DB9D30003692A1 /* LaunchScreen.xib in Resources */,
+				3DAE9D2A19DB9D30003692A1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DAE9D3019DB9D30003692A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DAE9D1519DB9D30003692A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D5366F519DC31D10017C6B8 /* GLDTweenSelector.m in Sources */,
+				3D53670C19DE16270017C6B8 /* TouchDemoViewController.m in Sources */,
+				3DAE9D2219DB9D30003692A1 /* AppDelegate.m in Sources */,
+				3D53675419DEE4550017C6B8 /* GLDEasingPlugin.m in Sources */,
+				3DAE9D1F19DB9D30003692A1 /* main.m in Sources */,
+				3DAE9D4D19DBB3C9003692A1 /* GLDTweenProperty.m in Sources */,
+				3DAE9D4519DB9DA0003692A1 /* GLDTween.m in Sources */,
+				3D53675519DEE4550017C6B8 /* GLDTweenPropertyPlugin.m in Sources */,
+				3D5366F819DC337F0017C6B8 /* GLDTweenBlock.m in Sources */,
+				3DAE9D5319DBB5EE003692A1 /* GLDTweenTween.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DAE9D2E19DB9D30003692A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DAE9D3919DB9D30003692A1 /* GLDTweenTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DAE9D3419DB9D30003692A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DAE9D1819DB9D30003692A1 /* GLDTween */;
+			targetProxy = 3DAE9D3319DB9D30003692A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3DAE9D2619DB9D30003692A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DAE9D2719DB9D30003692A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3DAE9D2B19DB9D30003692A1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DAE9D2C19DB9D30003692A1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DAE9D3A19DB9D30003692A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3DAE9D3B19DB9D30003692A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DAE9D3D19DB9D30003692A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GLDTween/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3DAE9D3E19DB9D30003692A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = GLDTween/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3DAE9D4019DB9D30003692A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GLDTweenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLDTween.app/GLDTween";
+			};
+			name = Debug;
+		};
+		3DAE9D4119DB9D30003692A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GLDTweenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLDTween.app/GLDTween";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DAE9D1419DB9D30003692A1 /* Build configuration list for PBXProject "GLDTween" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DAE9D3A19DB9D30003692A1 /* Debug */,
+				3DAE9D3B19DB9D30003692A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DAE9D3C19DB9D30003692A1 /* Build configuration list for PBXNativeTarget "GLDTween" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DAE9D3D19DB9D30003692A1 /* Debug */,
+				3DAE9D3E19DB9D30003692A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DAE9D3F19DB9D30003692A1 /* Build configuration list for PBXNativeTarget "GLDTweenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DAE9D4019DB9D30003692A1 /* Debug */,
+				3DAE9D4119DB9D30003692A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DAE9D1119DB9D30003692A1 /* Project object */;
+}
