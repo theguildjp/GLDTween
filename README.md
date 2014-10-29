@@ -134,9 +134,9 @@ UIViewを座標(200,300)に2秒で移動させる。
 #####複数のオブジェクトに同じ動きをさせる。
 パラメータの辞書を再利用することで、同じアニメーションを複数のNSObjectに適用できます。
 ```
-[GLDTween addTween:myView0 params:myDict}];
-[GLDTween addTween:myView1 params:myDict}];
-[GLDTween addTween:myView2 params:myDict}];
+[GLDTween addTween:myView0 params:myDict];
+[GLDTween addTween:myView1 params:myDict];
+[GLDTween addTween:myView2 params:myDict];
 ```
 
 
