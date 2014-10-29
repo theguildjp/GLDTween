@@ -9,21 +9,21 @@
 #import "GLDEasingPlugin.h"
 
 
-@implementation GLDEasing
+@implementation GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     return 0;
 }
 @end
 
 
-@implementation GLDEasingNone
+@implementation GLDEasingFunctionNone
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     return c * t / d + b;
 }
 @end
 
 
-@implementation GLDEasingInQuad
+@implementation GLDEasingFunctionInQuad
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
     return b + c * t2 * t2;
@@ -31,7 +31,7 @@
 @end
 
 
-@implementation GLDEasingOutQuad
+@implementation GLDEasingFunctionOutQuad
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
     return b + (-c * t2 * (t2 - 2));
@@ -39,7 +39,7 @@
 @end
 
 
-@implementation GLDEasingInOutQuad
+@implementation GLDEasingFunctionInOutQuad
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d * 2;
     if (t2 < 1) {
@@ -51,7 +51,7 @@
 @end
 
 
-@implementation GLDEasingInCubic
+@implementation GLDEasingFunctionInCubic
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
     return b + c * t2 * t2 * t2;
@@ -59,7 +59,7 @@
 @end
 
 
-@implementation GLDEasingOutCubic
+@implementation GLDEasingFunctionOutCubic
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
     --t2;
@@ -68,7 +68,7 @@
 @end
 
 
-@implementation GLDEasingInOutCubic
+@implementation GLDEasingFunctionInOutCubic
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d * 2;
     if (t2 < 1) {
@@ -80,7 +80,7 @@
 @end
 
 
-@implementation GLDEasingInQuart
+@implementation GLDEasingFunctionInQuart
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
     return b + c * t2 * t2 * t2 * t2;
@@ -88,7 +88,7 @@
 @end
 
 
-@implementation GLDEasingOutQuart
+@implementation GLDEasingFunctionOutQuart
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
     --t2;
@@ -97,7 +97,7 @@
 @end
 
 
-@implementation GLDEasingInOutQuart
+@implementation GLDEasingFunctionInOutQuart
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d * 2;
     if (t2 < 1) {
@@ -109,7 +109,7 @@
 @end
 
 
-@implementation GLDEasingInQuint
+@implementation GLDEasingFunctionInQuint
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
     return b + c * t2 * t2 * t2 * t2 * t2;
@@ -117,7 +117,7 @@
 @end
 
 
-@implementation GLDEasingOutQuint
+@implementation GLDEasingFunctionOutQuint
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
     --t2;
@@ -126,7 +126,7 @@
 @end
 
 
-@implementation GLDEasingInOutQuint
+@implementation GLDEasingFunctionInOutQuint
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d * 2;
     if (t2 < 1) {
@@ -138,42 +138,42 @@
 @end
 
 
-@implementation GLDEasingInSine
+@implementation GLDEasingFunctionInSine
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     return -c * cos(t / d * (M_PI_2)) + c + b;
 }
 @end
 
 
-@implementation GLDEasingOutSine
+@implementation GLDEasingFunctionOutSine
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     return c * sin(t / d * (M_PI_2)) + b;
 }
 @end
 
 
-@implementation GLDEasingInOutSine
+@implementation GLDEasingFunctionInOutSine
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     return -c / 2 * (cos(M_PI * t / d) - 1) + b;
 }
 @end
 
 
-@implementation GLDEasingInExpo
+@implementation GLDEasingFunctionInExpo
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     return c * pow(2, 10 * (t / d - 1)) + b;
 }
 @end
 
 
-@implementation GLDEasingOutExpo
+@implementation GLDEasingFunctionOutExpo
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     return c * (-pow(2, -10 * t / d) + 1) + b;
 }
 @end
 
 
-@implementation GLDEasingInOutExpo
+@implementation GLDEasingFunctionInOutExpo
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d * 2;
     if (t2 < 1) {
@@ -185,7 +185,7 @@
 @end
 
 
-@implementation GLDEasingInCirc
+@implementation GLDEasingFunctionInCirc
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
     return -c * (sqrt(1 - t2 * t2) - 1) + b;
@@ -193,7 +193,7 @@
 @end
 
 
-@implementation GLDEasingOutCirc
+@implementation GLDEasingFunctionOutCirc
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
     --t2;
@@ -202,7 +202,7 @@
 @end
 
 
-@implementation GLDEasingInOutCirc
+@implementation GLDEasingFunctionInOutCirc
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d * 2;
     if (t2 < 1) {
@@ -219,7 +219,7 @@
  https://github.com/feb19/Value-Tween-Library-for-Objective-C
  */
 
-@implementation GLDEasingInBack
+@implementation GLDEasingFunctionInBack
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float s = 1.70158;
     t /= d;
@@ -228,7 +228,7 @@
 @end
 
 
-@implementation GLDEasingOutBack
+@implementation GLDEasingFunctionOutBack
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float s = 1.70158;
     t = t / d - 1;
@@ -237,7 +237,7 @@
 @end
 
 
-@implementation GLDEasingInOutBack
+@implementation GLDEasingFunctionInOutBack
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float s = 1.70158;
     float k = 1.525;
@@ -254,7 +254,7 @@
 
 
 #warning need optimize
-@implementation GLDEasingInBounce
+@implementation GLDEasingFunctionInBounce
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     //return c - easeOutBounce (d - t, 0, c, d) + b;
     float val = 0;
@@ -279,7 +279,7 @@
 @end
 
 
-@implementation GLDEasingOutBounce
+@implementation GLDEasingFunctionOutBounce
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     t /= d;
     if (t < (1 / 2.75)) {
@@ -299,7 +299,7 @@
 
 
 #warning need optimize
-@implementation GLDEasingInOutBounce
+@implementation GLDEasingFunctionInOutBounce
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     if (t < d / 2) {
         return [self inT:t * 2 b:0 c:c d:d] * 0.5 + b;
@@ -330,7 +330,7 @@
 @end
 
 
-@implementation GLDEasingInElastic
+@implementation GLDEasingFunctionInElastic
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float s = 1.70158;
     float p = 0;
@@ -350,7 +350,7 @@
 @end
 
 
-@implementation GLDEasingOutElastic
+@implementation GLDEasingFunctionOutElastic
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float s = 1.70158;
     float p = 0;
@@ -369,7 +369,7 @@
 @end
 
 
-@implementation GLDEasingInOutElastic
+@implementation GLDEasingFunctionInOutElastic
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float s = 1.70158;
     float p = 0;

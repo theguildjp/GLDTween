@@ -12,37 +12,37 @@
 #import "GLDEasingPlugin.h"
 
 
-NSString *const GLDEasingTypeEaseNone = @"EaseNone";
-NSString *const GLDEasingTypeEaseInQuad = @"EaseInQuad";
-NSString *const GLDEasingTypeEaseOutQuad = @"EaseOutQuad";
-NSString *const GLDEasingTypeEaseInOutQuad = @"EaseInOutQuad";
-NSString *const GLDEasingTypeEaseInCubic = @"EaseInCubic";
-NSString *const GLDEasingTypeEaseOutCubic = @"EaseOutCubic";
-NSString *const GLDEasingTypeEaseInOutCubic = @"EaseInOutCubic";
-NSString *const GLDEasingTypeEaseInQuart = @"EaseInQuart";
-NSString *const GLDEasingTypeEaseOutQuart = @"EaseOutQuart";
-NSString *const GLDEasingTypeEaseInOutQuart = @"EaseInOutQuart";
-NSString *const GLDEasingTypeEaseInQuint = @"EaseInQuint";
-NSString *const GLDEasingTypeEaseOutQuint = @"EaseOutQuint";
-NSString *const GLDEasingTypeEaseInOutQuint = @"EaseInOutQuint";
-NSString *const GLDEasingTypeEaseInSine = @"EaseInSine";
-NSString *const GLDEasingTypeEaseOutSine = @"EaseOutSine";
-NSString *const GLDEasingTypeEaseInOutSine = @"EaseInOutSine";
-NSString *const GLDEasingTypeEaseInCirc = @"EaseInCirc";
-NSString *const GLDEasingTypeEaseOutCirc = @"EaseOutCirc";
-NSString *const GLDEasingTypeEaseInOutCirc = @"EaseInOutCirc";
-NSString *const GLDEasingTypeEaseInExpo = @"EaseInExpo";
-NSString *const GLDEasingTypeEaseOutExpo = @"EaseOutExpo";
-NSString *const GLDEasingTypeEaseInOutExpo = @"EaseInOutExpo";
-NSString *const GLDEasingTypeEaseInBack = @"EaseInBack";
-NSString *const GLDEasingTypeEaseOutBack = @"EaseOutBack";
-NSString *const GLDEasingTypeEaseInOutBack = @"EaseInOutBack";
-NSString *const GLDEasingTypeEaseInBounce = @"EaseInBounce";
-NSString *const GLDEasingTypeEaseOutBounce = @"EaseOutBounce";
-NSString *const GLDEasingTypeEaseInOutBounce = @"EaseInOutBounce";
-NSString *const GLDEasingTypeEaseInElastic = @"EaseInElastic";
-NSString *const GLDEasingTypeEaseOutElastic = @"EaseOutElastic";
-NSString *const GLDEasingTypeEaseInOutElastic = @"EaseInOutElastic";
+NSString *const GLDEasingNone = @"EaseNone";
+NSString *const GLDEasingInQuad = @"EaseInQuad";
+NSString *const GLDEasingOutQuad = @"EaseOutQuad";
+NSString *const GLDEasingInOutQuad = @"EaseInOutQuad";
+NSString *const GLDEasingInCubic = @"EaseInCubic";
+NSString *const GLDEasingOutCubic = @"EaseOutCubic";
+NSString *const GLDEasingInOutCubic = @"EaseInOutCubic";
+NSString *const GLDEasingInQuart = @"EaseInQuart";
+NSString *const GLDEasingOutQuart = @"EaseOutQuart";
+NSString *const GLDEasingInOutQuart = @"EaseInOutQuart";
+NSString *const GLDEasingInQuint = @"EaseInQuint";
+NSString *const GLDEasingOutQuint = @"EaseOutQuint";
+NSString *const GLDEasingInOutQuint = @"EaseInOutQuint";
+NSString *const GLDEasingInSine = @"EaseInSine";
+NSString *const GLDEasingOutSine = @"EaseOutSine";
+NSString *const GLDEasingInOutSine = @"EaseInOutSine";
+NSString *const GLDEasingInCirc = @"EaseInCirc";
+NSString *const GLDEasingOutCirc = @"EaseOutCirc";
+NSString *const GLDEasingInOutCirc = @"EaseInOutCirc";
+NSString *const GLDEasingInExpo = @"EaseInExpo";
+NSString *const GLDEasingOutExpo = @"EaseOutExpo";
+NSString *const GLDEasingInOutExpo = @"EaseInOutExpo";
+NSString *const GLDEasingInBack = @"EaseInBack";
+NSString *const GLDEasingOutBack = @"EaseOutBack";
+NSString *const GLDEasingInOutBack = @"EaseInOutBack";
+NSString *const GLDEasingInBounce = @"EaseInBounce";
+NSString *const GLDEasingOutBounce = @"EaseOutBounce";
+NSString *const GLDEasingInOutBounce = @"EaseInOutBounce";
+NSString *const GLDEasingInElastic = @"EaseInElastic";
+NSString *const GLDEasingOutElastic = @"EaseOutElastic";
+NSString *const GLDEasingInOutElastic = @"EaseInOutElastic";
 
 NSString *const GLDTweenParamDuration = @"duration";
 NSString *const GLDTweenParamDelay = @"delay";
@@ -191,10 +191,10 @@ NSMutableDictionary *reservedPropertyNames;
     tween.startTime = currentTime + delay;
     tween.completeTime = currentTime + delay + duration;
     tween.repeat = [[params objectForKey:GLDTweenParamRepeat] intValue];
-    tween.easing = [params objectForKey:GLDTweenParamEasing] ? (NSString *)[params objectForKey:GLDTweenParamEasing] : GLDEasingTypeEaseNone;
+    tween.easing = [params objectForKey:GLDTweenParamEasing] ? (NSString *)[params objectForKey:GLDTweenParamEasing] : GLDEasingNone;
     if (!easings[tween.easing]) {
         [self logWarning:[NSString stringWithFormat:@"Specified easing not exists %@ %@.", target, tween.easing]];
-        tween.easing = GLDEasingTypeEaseNone;
+        tween.easing = GLDEasingNone;
     }
     tween.rounded = ([params objectForKey:GLDTweenParamRounded] != nil);
     tween.repeatsDelay = ([params objectForKey:GLDTweenParamRepeatsDelay] != nil);
@@ -514,37 +514,37 @@ NSMutableDictionary *reservedPropertyNames;
         [self registerReservedPropertyName:GLDTweenParamUnlocksInteraction];
         
         //Register easing plugin
-        [self registerEasingPlugin:[GLDEasingNone class] forKey:GLDEasingTypeEaseNone];
-        [self registerEasingPlugin:[GLDEasingInQuad class] forKey:GLDEasingTypeEaseInQuad];
-        [self registerEasingPlugin:[GLDEasingOutQuad class] forKey:GLDEasingTypeEaseOutQuad];
-        [self registerEasingPlugin:[GLDEasingInOutQuad class] forKey:GLDEasingTypeEaseInOutQuad];
-        [self registerEasingPlugin:[GLDEasingInCubic class] forKey:GLDEasingTypeEaseInCubic];
-        [self registerEasingPlugin:[GLDEasingOutCubic class] forKey:GLDEasingTypeEaseOutCubic];
-        [self registerEasingPlugin:[GLDEasingInOutCubic class] forKey:GLDEasingTypeEaseInOutCubic];
-        [self registerEasingPlugin:[GLDEasingInQuart class] forKey:GLDEasingTypeEaseInQuart];
-        [self registerEasingPlugin:[GLDEasingOutQuart class] forKey:GLDEasingTypeEaseOutQuart];
-        [self registerEasingPlugin:[GLDEasingInOutQuart class] forKey:GLDEasingTypeEaseInOutQuart];
-        [self registerEasingPlugin:[GLDEasingInQuint class] forKey:GLDEasingTypeEaseInQuint];
-        [self registerEasingPlugin:[GLDEasingOutQuint class] forKey:GLDEasingTypeEaseOutQuint];
-        [self registerEasingPlugin:[GLDEasingInOutQuint class] forKey:GLDEasingTypeEaseInOutQuint];
-        [self registerEasingPlugin:[GLDEasingInSine class] forKey:GLDEasingTypeEaseInSine];
-        [self registerEasingPlugin:[GLDEasingOutSine class] forKey:GLDEasingTypeEaseOutSine];
-        [self registerEasingPlugin:[GLDEasingInOutSine class] forKey:GLDEasingTypeEaseInOutSine];
-        [self registerEasingPlugin:[GLDEasingInCirc class] forKey:GLDEasingTypeEaseInCirc];
-        [self registerEasingPlugin:[GLDEasingOutCirc class] forKey:GLDEasingTypeEaseOutCirc];
-        [self registerEasingPlugin:[GLDEasingInOutCirc class] forKey:GLDEasingTypeEaseInOutCirc];
-        [self registerEasingPlugin:[GLDEasingInExpo class] forKey:GLDEasingTypeEaseInExpo];
-        [self registerEasingPlugin:[GLDEasingOutExpo class] forKey:GLDEasingTypeEaseOutExpo];
-        [self registerEasingPlugin:[GLDEasingInOutExpo class] forKey:GLDEasingTypeEaseInOutExpo];
-        [self registerEasingPlugin:[GLDEasingInBack class] forKey:GLDEasingTypeEaseInBack];
-        [self registerEasingPlugin:[GLDEasingOutBack class] forKey:GLDEasingTypeEaseOutBack];
-        [self registerEasingPlugin:[GLDEasingInOutBack class] forKey:GLDEasingTypeEaseInOutBack];
-        [self registerEasingPlugin:[GLDEasingInBounce class] forKey:GLDEasingTypeEaseInBounce];
-        [self registerEasingPlugin:[GLDEasingOutBounce class] forKey:GLDEasingTypeEaseOutBounce];
-        [self registerEasingPlugin:[GLDEasingInOutBounce class] forKey:GLDEasingTypeEaseInOutBounce];
-        [self registerEasingPlugin:[GLDEasingInElastic class] forKey:GLDEasingTypeEaseInElastic];
-        [self registerEasingPlugin:[GLDEasingOutElastic class] forKey:GLDEasingTypeEaseOutElastic];
-        [self registerEasingPlugin:[GLDEasingInOutElastic class] forKey:GLDEasingTypeEaseInOutElastic];
+        [self registerEasingPlugin:[GLDEasingFunctionNone class] forKey:GLDEasingNone];
+        [self registerEasingPlugin:[GLDEasingFunctionInQuad class] forKey:GLDEasingInQuad];
+        [self registerEasingPlugin:[GLDEasingFunctionOutQuad class] forKey:GLDEasingOutQuad];
+        [self registerEasingPlugin:[GLDEasingFunctionInOutQuad class] forKey:GLDEasingInOutQuad];
+        [self registerEasingPlugin:[GLDEasingFunctionInCubic class] forKey:GLDEasingInCubic];
+        [self registerEasingPlugin:[GLDEasingFunctionOutCubic class] forKey:GLDEasingOutCubic];
+        [self registerEasingPlugin:[GLDEasingFunctionInOutCubic class] forKey:GLDEasingInOutCubic];
+        [self registerEasingPlugin:[GLDEasingFunctionInQuart class] forKey:GLDEasingInQuart];
+        [self registerEasingPlugin:[GLDEasingFunctionOutQuart class] forKey:GLDEasingOutQuart];
+        [self registerEasingPlugin:[GLDEasingFunctionInOutQuart class] forKey:GLDEasingInOutQuart];
+        [self registerEasingPlugin:[GLDEasingFunctionInQuint class] forKey:GLDEasingInQuint];
+        [self registerEasingPlugin:[GLDEasingFunctionOutQuint class] forKey:GLDEasingOutQuint];
+        [self registerEasingPlugin:[GLDEasingFunctionInOutQuint class] forKey:GLDEasingInOutQuint];
+        [self registerEasingPlugin:[GLDEasingFunctionInSine class] forKey:GLDEasingInSine];
+        [self registerEasingPlugin:[GLDEasingFunctionOutSine class] forKey:GLDEasingOutSine];
+        [self registerEasingPlugin:[GLDEasingFunctionInOutSine class] forKey:GLDEasingInOutSine];
+        [self registerEasingPlugin:[GLDEasingFunctionInCirc class] forKey:GLDEasingInCirc];
+        [self registerEasingPlugin:[GLDEasingFunctionOutCirc class] forKey:GLDEasingOutCirc];
+        [self registerEasingPlugin:[GLDEasingFunctionInOutCirc class] forKey:GLDEasingInOutCirc];
+        [self registerEasingPlugin:[GLDEasingFunctionInExpo class] forKey:GLDEasingInExpo];
+        [self registerEasingPlugin:[GLDEasingFunctionOutExpo class] forKey:GLDEasingOutExpo];
+        [self registerEasingPlugin:[GLDEasingFunctionInOutExpo class] forKey:GLDEasingInOutExpo];
+        [self registerEasingPlugin:[GLDEasingFunctionInBack class] forKey:GLDEasingInBack];
+        [self registerEasingPlugin:[GLDEasingFunctionOutBack class] forKey:GLDEasingOutBack];
+        [self registerEasingPlugin:[GLDEasingFunctionInOutBack class] forKey:GLDEasingInOutBack];
+        [self registerEasingPlugin:[GLDEasingFunctionInBounce class] forKey:GLDEasingInBounce];
+        [self registerEasingPlugin:[GLDEasingFunctionOutBounce class] forKey:GLDEasingOutBounce];
+        [self registerEasingPlugin:[GLDEasingFunctionInOutBounce class] forKey:GLDEasingInOutBounce];
+        [self registerEasingPlugin:[GLDEasingFunctionInElastic class] forKey:GLDEasingInElastic];
+        [self registerEasingPlugin:[GLDEasingFunctionOutElastic class] forKey:GLDEasingOutElastic];
+        [self registerEasingPlugin:[GLDEasingFunctionInOutElastic class] forKey:GLDEasingInOutElastic];
         
         //Register special property
         [self registerSpecialPropertyPlugin:[GLDTweenPropertyX class] forKey:@"x"];
@@ -566,7 +566,7 @@ NSMutableDictionary *reservedPropertyNames;
 
 - (BOOL)registerEasingPlugin:(Class)class forKey:(NSString *)key {
     #warning Show Warning and override when same keyname is given.
-    GLDEasing *easing = [[class alloc] init];
+    GLDEasingFunction *easing = [[class alloc] init];
     [easings setObject:easing forKey:key];
     [easingNames addObject:key];
     return YES;
@@ -712,7 +712,7 @@ NSMutableDictionary *reservedPropertyNames;
         //Inject Tween
         float t = currentTime - tween.startTime;
         float d = tween.completeTime - tween.startTime;
-        GLDEasing *ease = easings[tween.easing];
+        GLDEasingFunction *ease = easings[tween.easing];
         for (NSString *key in tween.properties) {
             GLDTweenProperty *property = [tween.properties objectForKey:key];
             if (willComplete) {

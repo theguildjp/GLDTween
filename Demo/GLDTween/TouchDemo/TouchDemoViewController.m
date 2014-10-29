@@ -13,20 +13,8 @@
 @implementation TouchDemoViewController
 
 
-NSArray* easings;
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    /*
-    easings = @[GLDEasingTypeEaseInCubic,
-                GLDEasingTypeEaseOutCubic,
-                GLDEasingTypeEaseInOutCubic,
-                GLDEasingTypeEaseInQuad,
-                GLDEasingTypeEaseOutQuad,
-                GLDEasingTypeEaseInOutQuad,
-                GLDEasingTypeEase];*/
     
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenDidToucth:)];
     [self.view addGestureRecognizer:gesture];

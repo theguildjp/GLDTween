@@ -27,7 +27,7 @@
 }
 
 
-- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasingFunction *)ease {
 }
 
 
@@ -53,7 +53,7 @@
 }
 
 
-- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasingFunction *)ease {
     float b = ((NSNumber *)self.startValue).floatValue;
     float c = ((NSNumber *)self.completeValue).floatValue - b;
     float val = [ease t:t b:b c:c d:d];
@@ -73,7 +73,7 @@
 }
 
 
-- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasingFunction *)ease {
     CGPoint spt = self.startValue.CGPointValue;
     CGPoint cpt = self.completeValue.CGPointValue;
     CGPoint destPt = CGPointMake([ease t:t b:spt.x c:cpt.x - spt.x d:d],
@@ -94,7 +94,7 @@
 }
 
 
-- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasingFunction *)ease {
     CGPoint ssz = self.startValue.CGPointValue;
     CGPoint csz = self.completeValue.CGPointValue;
     CGSize destSz = CGSizeMake([ease t:t b:ssz.x c:csz.x - ssz.x d:d],
@@ -115,7 +115,7 @@
 }
 
 
-- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasingFunction *)ease {
     CGRect src = self.startValue.CGRectValue;
     CGRect crc = self.completeValue.CGRectValue;
     CGRect destRc = CGRectMake([ease t:t b:src.origin.x c:crc.origin.x - src.origin.x d:d],
@@ -138,7 +138,7 @@
 }
 
 
-- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasingFunction *)ease {
     CGAffineTransform sat = self.startValue.CGAffineTransformValue;
     CGAffineTransform cat = self.completeValue.CGAffineTransformValue;
     CGAffineTransform destAt = CGAffineTransformMake([ease t:t b:sat.a c:cat.a - sat.a d:d],
@@ -163,7 +163,7 @@
 }
 
 
-- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasingFunction *)ease {
     CATransform3D st3 = self.startValue.CATransform3DValue;
     CATransform3D ct3 = self.completeValue.CATransform3DValue;
     

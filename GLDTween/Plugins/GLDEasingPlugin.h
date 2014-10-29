@@ -9,130 +9,130 @@
 #import <Foundation/Foundation.h>
 
 
-@interface GLDEasing : NSObject
+@interface GLDEasingFunction : NSObject
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingNone : GLDEasing
+@interface GLDEasingFunctionNone : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInQuad : GLDEasing
+@interface GLDEasingFunctionInQuad : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingOutQuad : GLDEasing
+@interface GLDEasingFunctionOutQuad : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInOutQuad: GLDEasing
+@interface GLDEasingFunctionInOutQuad: GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInCubic : GLDEasing
+@interface GLDEasingFunctionInCubic : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingOutCubic : GLDEasing
+@interface GLDEasingFunctionOutCubic : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInOutCubic: GLDEasing
+@interface GLDEasingFunctionInOutCubic: GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInQuart : GLDEasing
+@interface GLDEasingFunctionInQuart : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingOutQuart : GLDEasing
+@interface GLDEasingFunctionOutQuart : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInOutQuart: GLDEasing
+@interface GLDEasingFunctionInOutQuart: GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInQuint : GLDEasing
+@interface GLDEasingFunctionInQuint : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingOutQuint : GLDEasing
+@interface GLDEasingFunctionOutQuint : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInOutQuint: GLDEasing
+@interface GLDEasingFunctionInOutQuint: GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInSine : GLDEasing
+@interface GLDEasingFunctionInSine : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingOutSine : GLDEasing
+@interface GLDEasingFunctionOutSine : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInOutSine: GLDEasing
+@interface GLDEasingFunctionInOutSine: GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInExpo : GLDEasing
+@interface GLDEasingFunctionInExpo : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingOutExpo : GLDEasing
+@interface GLDEasingFunctionOutExpo : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInOutExpo: GLDEasing
+@interface GLDEasingFunctionInOutExpo: GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInCirc : GLDEasing
+@interface GLDEasingFunctionInCirc : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingOutCirc : GLDEasing
+@interface GLDEasingFunctionOutCirc : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInOutCirc: GLDEasing
+@interface GLDEasingFunctionInOutCirc: GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInBack : GLDEasing
+@interface GLDEasingFunctionInBack : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingOutBack : GLDEasing
+@interface GLDEasingFunctionOutBack : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInOutBack: GLDEasing
+@interface GLDEasingFunctionInOutBack: GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInBounce : GLDEasing
+@interface GLDEasingFunctionInBounce : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingOutBounce : GLDEasing
+@interface GLDEasingFunctionOutBounce : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInOutBounce: GLDEasing
+@interface GLDEasingFunctionInOutBounce: GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInElastic : GLDEasing
+@interface GLDEasingFunctionInElastic : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingOutElastic : GLDEasing
+@interface GLDEasingFunctionOutElastic : GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end
 
-@interface GLDEasingInOutElastic: GLDEasing
+@interface GLDEasingFunctionInOutElastic: GLDEasingFunction
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d;
 @end

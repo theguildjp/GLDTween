@@ -22,7 +22,7 @@
 @property (nonatomic, getter = isRounded) BOOL rounded;
 
 - (void)setStartValueForTarget:(NSObject *)target key:(NSString *)key;
-- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease;
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasingFunction *)ease;
 - (void)setCompleteValueForTarget:(NSObject *)target key:(NSString *)key;
 - (void)updateStartValueForTarget:(NSObject *)target key:(NSString *)key;
 - (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key;
