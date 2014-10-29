@@ -33,7 +33,7 @@ GLDTweenのサポートする一般的な数値型であれば、あらゆるプ
 ##### CocoaPods
 [CocoaPods](http://cocoapods.org/)を使っている場合、以下をPodfileに追加します。
 ```
-pod 'GLDTween', '~> 1.0'
+pod 'GLDTween', '~> 0.0.1'
 ```
 
 ##### GitあるいはZip
