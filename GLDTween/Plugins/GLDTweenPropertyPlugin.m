@@ -1,5 +1,5 @@
 //
-//  GLDSpecialProperty.m
+//  GLDTweenPropertyPlugin.m
 //  GLDTween
 //
 //  Created by Takayuki Fukatsu on 2014/10/01.
