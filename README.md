@@ -223,16 +223,6 @@ lockInteraction、unlockInteractionパラメータで、アニメーション中
             }];
 ```
 
-
-## 指定可能なアニメーションカーブ
-いわゆるRobert Pennerによる[主要アニメーションカーブ](http://easings.net/en)は全てサポートしています。
-
-<ul>
-<li>GLDEasingTypeInSine</li>
-<li>GLDEasingTypeOutSine</li>
-<li>GLDEasingTypeInOutSine</li>
-</ul>
-
 ## 指定可能なパラメータ
 アニメーションのパラメータは、GLDTween.addTweenの第2引数で指定します。第2引数は<String, Any>型のDictionaryで、あらゆるデータ型を内包可能です。
 
@@ -306,6 +296,22 @@ lockInteraction、unlockInteractionパラメータで、アニメーション中
   <dt>UIColor（対応予定）</dt>
   <dd>UIView.backgroundColor等</dd>
 </dl>
+
+## 指定可能なアニメーションカーブ
+いわゆるRobert Pennerによる[主要アニメーションカーブ](http://easings.net/en)は全てサポートしています。
+
+<ul>
+<li>GLDEasingTypeLinear</li>
+<li>GLDEasingTypeInSine</li>
+<li>GLDEasingTypeOutSine</li>
+<li>GLDEasingTypeInOutSine</li>
+<li>GLDEasingTypeInQuad</li>
+<li>GLDEasingTypeOutQuad</li>
+<li>GLDEasingTypeInOutQuad</li>
+<li>GLDEasingTypeInCubic</li>
+<li>GLDEasingTypeOutCubic</li>
+<li>GLDEasingTypeInOutCubic</li>
+</ul>
 
 
 ##プラグインの作成
