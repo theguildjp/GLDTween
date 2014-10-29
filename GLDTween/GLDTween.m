@@ -191,7 +191,7 @@ NSMutableDictionary *reservedPropertyNames;
     tween.startTime = currentTime + delay;
     tween.completeTime = currentTime + delay + duration;
     tween.repeat = [[params objectForKey:GLDTweenParamRepeat] intValue];
-    tween.easing = [params objectForKey:GLDTweenParamEasing]? (NSString *)[params objectForKey:GLDTweenParamEasing] : GLDEasingTypeEaseNone;
+    tween.easing = [params objectForKey:GLDTweenParamEasing] ? (NSString *)[params objectForKey:GLDTweenParamEasing] : GLDEasingTypeEaseNone;
     if (!easings[tween.easing]) {
         [self logWarning:[NSString stringWithFormat:@"Specified easing not exists %@ %@.", target, tween.easing]];
         tween.easing = GLDEasingTypeEaseNone;
@@ -781,7 +781,7 @@ NSMutableDictionary *reservedPropertyNames;
 
 
 - (BOOL)isReservedPropertyName:(NSString *)name {
-    return reservedPropertyNames[name]? YES : NO;
+    return reservedPropertyNames[name] ? YES : NO;
 }
 
 
