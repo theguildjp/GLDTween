@@ -14,8 +14,8 @@
  */
 @interface GLDTweenSelector : NSObject
 
-@property (retain, nonatomic) NSObject *target;
-@property (assign, nonatomic) SEL selector;
+@property (strong, nonatomic) NSObject *target;
+@property (nonatomic) SEL selector;
 
 - (id)initWithSelector:(SEL)selector target:(NSObject *)target;
 - (void)perform;
