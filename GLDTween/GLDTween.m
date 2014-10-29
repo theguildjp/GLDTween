@@ -477,12 +477,13 @@ NSMutableDictionary *reservedPropertyNames;
 #pragma mark - Private Init
 
 
-static GLDTween *_sharedEngine;
 + (GLDTween *)sharedEngine {
-    if (!_sharedEngine) {
-        _sharedEngine = [[GLDTween alloc] init];
-    }
-    return _sharedEngine;
+    static GLDTween *sharedEngine = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedEngine = [[GLDTween alloc] init];
+    });
+    return sharedEngine;
 }
 
 
