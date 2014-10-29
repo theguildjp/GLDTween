@@ -196,10 +196,10 @@ NSMutableDictionary *reservedPropertyNames;
         [self logWarning:[NSString stringWithFormat:@"Specified easing not exists %@ %@.", target, tween.easing]];
         tween.easing = GLDEasingTypeEaseNone;
     }
-    tween.rounded = [params objectForKey:GLDTweenParamRounded] ? true : false;
-    tween.repeatsDelay = [params objectForKey:GLDTweenParamRepeatsDelay] ? true : false;
-    tween.locksInteraction = [params objectForKey:GLDTweenParamLocksInteraction] ? true : false;
-    tween.unlocksInteraction = [params objectForKey:GLDTweenParamUnlocksInteraction] ? true : false;
+    tween.rounded = ([params objectForKey:GLDTweenParamRounded] != nil);
+    tween.repeatsDelay = ([params objectForKey:GLDTweenParamRepeatsDelay] != nil);
+    tween.locksInteraction = ([params objectForKey:GLDTweenParamLocksInteraction] != nil);
+    tween.unlocksInteraction = ([params objectForKey:GLDTweenParamUnlocksInteraction] != nil);
     tween.delay = delay;
     
     //Setup Event Handler
@@ -259,11 +259,11 @@ NSMutableDictionary *reservedPropertyNames;
                     } else {
                         //Unknown DataType
                         [self logWarning:[NSString stringWithFormat:@"Wrong Data Type %@ %@", key, value]];
-                        return false;
+                        return FALSE;
                     }
                 } else {
                     [self logWarning:[NSString stringWithFormat:@"Wrong Data Type %@ %@", key, value]];
-                    return false;
+                    return FALSE;
                 }
             }
             property.key = key;
@@ -289,7 +289,7 @@ NSMutableDictionary *reservedPropertyNames;
         [self updateTweenByIndex:index];
         [self killTweenByIndex:index];
     }
-    return true;
+    return TRUE;
 }
 
 
@@ -397,7 +397,7 @@ NSMutableDictionary *reservedPropertyNames;
 }
 
 - (BOOL)removeTween:(NSObject *)target withProps:(NSArray *)props {
-    BOOL result = false;
+    BOOL result = FALSE;
     for (int i = 0; i < tweens.count; i++) {
         GLDTweenTween *tween = (GLDTweenTween *)tweens[i];
         if (target == tween.target && !tween.killFlag) {
@@ -405,12 +405,12 @@ NSMutableDictionary *reservedPropertyNames;
                 NSString *key = props[j];
                 if (tween.properties[key]) {
                     [tween.properties removeObjectForKey:key];
-                    result = true;
+                    result = TRUE;
                 }
             }
             if (tween.properties.count == 0) {
                 [self killTweenByIndex:i];
-                result = true;
+                result = TRUE;
             }
         }
     }
@@ -604,13 +604,13 @@ NSMutableDictionary *reservedPropertyNames;
 - (BOOL)resumeTweenByIndex:(int)index {
     GLDTweenTween *tween = (GLDTweenTween *)tweens[index];
     if (!tween.isPaused) {
-        return false;
+        return FALSE;
     }
     tween.startTime = tween.startTime + currentTime - tween.completeTime;
     tween.completeTime = tween.completeTime + currentTime - tween.pausedTime;
     tween.pausedTime = 0;
-    tween.paused = false;
-    return YES;
+    tween.paused = FALSE;
+    return TRUE;
 }
 
 
@@ -738,7 +738,7 @@ NSMutableDictionary *reservedPropertyNames;
             if (tween.repeat > 0) {
                 tween.repeat--;
             }
-            tween.completed = false;
+            tween.completed = NO;
             tween.completeTime = (tween.completeTime - tween.startTime) + currentTime;
             tween.startTime = currentTime;
             if (tween.repeatsDelay) {
@@ -751,7 +751,7 @@ NSMutableDictionary *reservedPropertyNames;
             if (tween.repeatSelector) {
                 [tween.completionSelector perform];
             }
-            return true;
+            return TRUE;
         }
         tween.completed = YES;
         
@@ -766,7 +766,7 @@ NSMutableDictionary *reservedPropertyNames;
         [self killTweenByIndex:index];
     }
     
-    return false;
+    return FALSE;
 }
 
 
