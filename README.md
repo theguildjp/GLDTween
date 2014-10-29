@@ -227,6 +227,11 @@ lockInteraction、unlockInteractionパラメータで、アニメーション中
 ## 指定可能なアニメーションカーブ
 いわゆるRobert Pennerによる[主要アニメーションカーブ](http://easings.net/en)は全てサポートしています。
 
+<ul>
+<li>GLDEasingTypeInSine</li>
+<li>GLDEasingTypeOutSine</li>
+<li>GLDEasingTypeInOutSine</li>
+</ul>
 
 ## 指定可能なパラメータ
 アニメーションのパラメータは、GLDTween.addTweenの第2引数で指定します。第2引数は<String, Any>型のDictionaryで、あらゆるデータ型を内包可能です。
@@ -317,8 +322,7 @@ GLDTweenでは以下の2種類のプラグインを作成可能です。
 
 ##対応予定機能
 
-- オートリバース？
-- アニメーション中に同じターゲットのアニメーションをOverWrite
+- オートリバース
 
 
 ##Todo
