@@ -212,14 +212,14 @@ __weak id s = self;
 
 ### アニメーション中の操作ロック
 
-lockInteraction、unlockInteractionパラメータで、アニメーション中のユーザー操作をロックできます。
+locksInteraction、unlocksInteractionパラメータで、アニメーション中のユーザー操作をロックできます。
 ```
 [GLDTween addTween:myView 
             params:@{@"duration": @1.0, //時間
                    @"delay": @0.0,
                    @"easing": GLDEasingTypeEaseInOutExpo,
-                   @"lockInteraction": @true, //追加時に操作系をロック
-                   @"unlockInteraction": @true //完了 or 削除時に操作系をアンロック
+                   @"locksInteraction": @true, //追加時に操作系をロック
+                   @"unlocksInteraction": @true //完了 or 削除時に操作系をアンロック
             }];
 ```
 
@@ -236,9 +236,9 @@ lockInteraction、unlockInteractionパラメータで、アニメーション中
   <dd>イージングカーブ（後述）の指定</dd>
   <dt>repeat: NSNumber</dt>
   <dd>繰り返し回数。ディフォルトは0。-1を指定した場合は無限ループ。</dd>
-  <dt>lockInteraction: BOOL</dt>
+  <dt>locksInteraction: BOOL</dt>
   <dd>アニメーション登録時にユーザーインタラクション（タッチ等）をロック。</dd>
-  <dt>unlockInteraction: BOOL</dt>
+  <dt>unlocksInteraction: BOOL</dt>
   <dd>アニメーション完了/削除時に、ユーザーインタラクション（タッチ等）をアンロック。</dd>
   <dt>x: NSNumber</dt>
   <dd>frame.origin.xの省略記法</dd>

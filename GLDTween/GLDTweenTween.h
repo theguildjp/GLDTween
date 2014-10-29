@@ -20,12 +20,12 @@
 @property (strong, nonatomic) NSMutableDictionary *properties;
 @property (strong, nonatomic) NSString *easing;
 @property (nonatomic) int repeat;
-@property (nonatomic) BOOL repeatDelay;
-@property (nonatomic) BOOL rounded;
+@property (nonatomic) BOOL repeatsDelay;
+@property (nonatomic, getter = isRounded) BOOL rounded;
 
 //Interaction(Testing)
-@property (nonatomic) BOOL lockInteraction; //Ignore Interaction when add.
-@property (nonatomic) BOOL unlockInteraction; //End Ignore Interaction when complete(or removed?)
+@property (nonatomic) BOOL locksInteraction; //Ignore Interaction when add.
+@property (nonatomic) BOOL unlocksInteraction; //End Ignore Interaction when complete(or removed?)
 
 //Time
 @property (nonatomic) NSTimeInterval startTime;
@@ -34,9 +34,9 @@
 @property (nonatomic) NSTimeInterval delay;
 
 //Flag
-@property (nonatomic) BOOL isPaused;
-@property (nonatomic) BOOL hasStarted;
-@property (nonatomic) BOOL hasCompleted;
+@property (nonatomic, getter = isPaused) BOOL paused;
+@property (nonatomic, getter = hasStarted) BOOL started;
+@property (nonatomic, getter = hasCompleted) BOOL completed;
 @property (nonatomic) BOOL killFlag;
 
 //Blocks

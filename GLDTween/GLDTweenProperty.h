@@ -14,11 +14,12 @@
 
 @interface GLDTweenProperty : NSObject
 
-@property (strong) NSString *key;
-@property (strong, readonly) NSString *type;
+@property (strong, nonatomic) NSString *key;
+@property (strong, nonatomic, readonly) NSString *type;
 @property NSValue *startValue;
 @property NSValue *completeValue;
-@property BOOL rounded;
+// TODO: Implement
+@property (nonatomic, getter = isRounded) BOOL rounded;
 
 - (void)setStartValueForTarget:(NSObject *)target key:(NSString *)key;
 - (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease;

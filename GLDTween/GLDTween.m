@@ -57,9 +57,9 @@ NSString *const GLDTweenParamStartBlock = @"startBlock";
 NSString *const GLDTweenParamUpdateBlock = @"updateBlock";
 NSString *const GLDTweenParamRepeatBlock = @"repeatBlock";
 NSString *const GLDTweenParamCompletionBlock = @"completionBLock";
-NSString *const GLDTweenParamRepeatDelay = @"repeatDelay";
-NSString *const GLDTweenParamLockInteraction = @"lockInteraction";
-NSString *const GLDTweenParamUnlockInteraction = @"unlockInteraction";
+NSString *const GLDTweenParamRepeatsDelay = @"repeatsDelay";
+NSString *const GLDTweenParamLocksInteraction = @"locksInteraction";
+NSString *const GLDTweenParamUnlocksInteraction = @"unlocksInteraction";
 
 
 @implementation GLDTween
@@ -197,9 +197,9 @@ NSMutableDictionary *reservedPropertyNames;
         tween.easing = GLDEasingTypeEaseNone;
     }
     tween.rounded = [params objectForKey:GLDTweenParamRounded] ? true : false;
-    tween.repeatDelay = [params objectForKey:GLDTweenParamRepeatDelay] ? true : false;
-    tween.lockInteraction = [params objectForKey:GLDTweenParamLockInteraction] ? true : false;
-    tween.unlockInteraction = [params objectForKey:GLDTweenParamUnlockInteraction] ? true : false;
+    tween.repeatsDelay = [params objectForKey:GLDTweenParamRepeatsDelay] ? true : false;
+    tween.locksInteraction = [params objectForKey:GLDTweenParamLocksInteraction] ? true : false;
+    tween.unlocksInteraction = [params objectForKey:GLDTweenParamUnlocksInteraction] ? true : false;
     tween.delay = delay;
     
     //Setup Event Handler
@@ -276,7 +276,7 @@ NSMutableDictionary *reservedPropertyNames;
         }
     }
     
-    if (tween.lockInteraction) {
+    if (tween.locksInteraction) {
         [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     }
     
@@ -509,9 +509,9 @@ NSMutableDictionary *reservedPropertyNames;
         [self registerReservedPropertyName:GLDTweenParamUpdateSelector];
         [self registerReservedPropertyName:GLDTweenParamRepeatSelector];
         [self registerReservedPropertyName:GLDTweenParamCompletionSelector];
-        [self registerReservedPropertyName:GLDTweenParamRepeatDelay];
-        [self registerReservedPropertyName:GLDTweenParamLockInteraction];
-        [self registerReservedPropertyName:GLDTweenParamUnlockInteraction];
+        [self registerReservedPropertyName:GLDTweenParamRepeatsDelay];
+        [self registerReservedPropertyName:GLDTweenParamLocksInteraction];
+        [self registerReservedPropertyName:GLDTweenParamUnlocksInteraction];
         
         //Register easing plugin
         [self registerEasingPlugin:[GLDEasingNone class] forKey:GLDEasingTypeEaseNone];
@@ -596,7 +596,7 @@ NSMutableDictionary *reservedPropertyNames;
         return NO;
     }
     tween.pausedTime = currentTime;
-    tween.isPaused = YES;
+    tween.paused = YES;
     return YES;
 }
 
@@ -609,14 +609,14 @@ NSMutableDictionary *reservedPropertyNames;
     tween.startTime = tween.startTime + currentTime - tween.completeTime;
     tween.completeTime = tween.completeTime + currentTime - tween.pausedTime;
     tween.pausedTime = 0;
-    tween.isPaused = false;
+    tween.paused = false;
     return YES;
 }
 
 
 - (BOOL)killTweenByIndex:(int)index {
     GLDTweenTween *tween = tweens[index];
-    if (tween.unlockInteraction) {
+    if (tween.unlocksInteraction) {
         [[UIApplication sharedApplication] endIgnoringInteractionEvents];
     }
     tween.killFlag = YES;
@@ -696,7 +696,7 @@ NSMutableDictionary *reservedPropertyNames;
                 GLDTweenProperty *property = [tween.properties objectForKey:key];
                 [property updateStartValueForTarget:tween.target key:key];
             }
-            tween.hasStarted = YES;
+            tween.started = YES;
             
             [self removeConflictedTweenWithTween:tween];
             
@@ -740,10 +740,10 @@ NSMutableDictionary *reservedPropertyNames;
             if (tween.repeat > 0) {
                 tween.repeat--;
             }
-            tween.hasCompleted = false;
+            tween.completed = false;
             tween.completeTime = (tween.completeTime - tween.startTime) + currentTime;
             tween.startTime = currentTime;
-            if (tween.repeatDelay) {
+            if (tween.repeatsDelay) {
                 tween.completeTime += tween.delay;
                 tween.startTime += tween.delay;
             }
@@ -755,7 +755,7 @@ NSMutableDictionary *reservedPropertyNames;
             }
             return true;
         }
-        tween.hasCompleted = YES;
+        tween.completed = YES;
         
         //Invoke Completion Completion Selector and Block
         if (tween.completionBlock) {

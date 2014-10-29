@@ -61,9 +61,9 @@ extern NSString *const GLDTweenParamStartBlock;
 extern NSString *const GLDTweenParamUpdateBlock;
 extern NSString *const GLDTweenParamRepeatBlock;
 extern NSString *const GLDTweenParamCompletionBlock;
-extern NSString *const GLDTweenParamRepeatDelay;
-extern NSString *const GLDTweenParamLockInteraction;
-extern NSString *const GLDTweenParamUnlockInteraction;
+extern NSString *const GLDTweenParamRepeatsDelay;
+extern NSString *const GLDTweenParamLocksInteraction;
+extern NSString *const GLDTweenParamUnlocksInteraction;
 
 
 @interface GLDTween : NSObject
