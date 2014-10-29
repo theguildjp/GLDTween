@@ -11,10 +11,10 @@
 
 @interface GLDTweenBlock : NSObject
 
-@property (nonatomic,copy)void (^block)(void);
+@property (nonatomic, copy)void (^block)(void);
 
 - (id)initWithBlock:(void(^)(void))block;
-+ (GLDTweenBlock*)block:(void(^)(void))block;
++ (GLDTweenBlock *)block:(void(^)(void))block;
 - (void)execute;
 
 @end

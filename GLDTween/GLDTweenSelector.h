@@ -14,11 +14,11 @@
  */
 @interface GLDTweenSelector : NSObject
 
-@property (retain,nonatomic) NSObject* target;
-@property (assign,nonatomic) SEL selector;
+@property (retain, nonatomic) NSObject *target;
+@property (assign, nonatomic) SEL selector;
 
-- (id)initWithSelector:(SEL)selector target:(NSObject*)target;
+- (id)initWithSelector:(SEL)selector target:(NSObject *)target;
 - (void)perform;
-+ (GLDTweenSelector*)selector:(SEL)selector withTarget:(NSObject*)target;
++ (GLDTweenSelector *)selector:(SEL)selector withTarget:(NSObject *)target;
 
 @end

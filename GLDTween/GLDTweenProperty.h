@@ -14,10 +14,10 @@
 
 @interface GLDTweenProperty : NSObject
 
-@property (strong) NSString* key;
-@property (strong, readonly) NSString* type;
-@property NSValue* startValue;
-@property NSValue* completeValue;
+@property (strong) NSString *key;
+@property (strong, readonly) NSString *type;
+@property NSValue *startValue;
+@property NSValue *completeValue;
 @property (assign) BOOL rounded;
 
 - (void)setStartValueForTarget:(NSObject*)target key:(NSString*)key;

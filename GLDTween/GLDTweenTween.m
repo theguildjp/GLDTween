@@ -15,10 +15,10 @@
 @implementation GLDTweenTween
 
 
-- (id)init{
+- (id)init {
     self = [super init];
-    if(self){
-        self.properties = [[NSMutableDictionary alloc]initWithCapacity:0];
+    if (self) {
+        self.properties = [[NSMutableDictionary alloc] initWithCapacity:0];
     }
     return self;
 }

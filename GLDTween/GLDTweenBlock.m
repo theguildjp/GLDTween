@@ -12,21 +12,21 @@
 @implementation GLDTweenBlock
 
 
-- (id)initWithBlock:(void(^)(void))block{
+- (id)initWithBlock:(void(^)(void))block {
     self = [super init];
-    if(self){
+    if (self) {
         self.block = block;
     }
     return self;
 }
 
 
-+ (GLDTweenBlock*)block:(void(^)(void))block{
-    return [[GLDTweenBlock alloc]initWithBlock:block];
++ (GLDTweenBlock *)block:(void(^)(void))block {
+    return [[GLDTweenBlock alloc] initWithBlock:block];
 }
 
 
-- (void)execute{
+- (void)execute {
     self.block();
 }
 

@@ -1,5 +1,5 @@
 //
-//  GLDEasing.h
+//  GLDEasingPlugin.h
 //  GLDTween
 //
 //  Created by Takayuki Fukatsu on 2014/10/01.

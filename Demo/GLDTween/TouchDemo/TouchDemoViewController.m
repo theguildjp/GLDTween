@@ -28,7 +28,7 @@ NSArray* easings;
                 GLDEasingTypeEaseInOutQuad,
                 GLDEasingTypeEase];*/
     
-    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(screenDidToucth:)];
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(screenDidToucth:)];
     [self.view addGestureRecognizer:gesture];
     
     self.box.center = CGPointMake(0,0);
@@ -43,15 +43,14 @@ NSArray* easings;
 }
 
 
-- (void)screenDidToucth:(UITapGestureRecognizer*)gesture{
-    
+- (void)screenDidToucth:(UITapGestureRecognizer*)gesture {
     CGPoint pt = [gesture locationInView:gesture.view];
-    float rotation = arc4random()%360;
+    float rotation = arc4random() % 360;
     float scale = arc4random() % 100 / 50.0 + 0.5;
     
     CGAffineTransform t = CGAffineTransformIdentity;
     t = CGAffineTransformTranslate(t, pt.x, pt.y);
-    t = CGAffineTransformRotate(t, rotation*M_PI/180.0);
+    t = CGAffineTransformRotate(t, rotation * M_PI / 180.0);
     t = CGAffineTransformScale(t, scale, scale);
     
     NSString* transition = [GLDTween easingNames][[self.picker selectedRowInComponent:0]];
@@ -64,21 +63,21 @@ NSArray* easings;
 }
 
 
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
 }
 
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
 }
 
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
     return [GLDTween easingNames].count;
 }
 
 
-- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     return [GLDTween easingNames][row];
 }
 

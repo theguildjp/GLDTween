@@ -11,7 +11,7 @@
 
 @interface TouchDemoViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (strong,nonatomic) IBOutlet UIView* box;
-@property (strong,nonatomic) IBOutlet UIPickerView *picker;
+@property (strong, nonatomic) IBOutlet UIView *box;
+@property (strong, nonatomic) IBOutlet UIPickerView *picker;
 
 @end

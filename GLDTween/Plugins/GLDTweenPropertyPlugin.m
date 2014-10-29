@@ -10,20 +10,20 @@
 
 
 @implementation GLDTweenPropertyX
-- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]){
-        UIView *view = (UIView*)target;
+- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]) {
+        UIView *view = (UIView *)target;
         CGRect rect = view.frame;
-        rect.origin = CGPointMake(((NSNumber*)value).floatValue, view.frame.origin.y);
+        rect.origin = CGPointMake(((NSNumber *)value).floatValue, view.frame.origin.y);
         view.frame = rect;
-    }else{
+    } else {
         [super setValue:value forTarget:target key:key];
     }
 }
 
-- (id)valueForTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]]){
-        return [NSNumber numberWithFloat:((UIView*)target).frame.origin.x] ;
+- (id)valueForTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]]) {
+        return [NSNumber numberWithFloat:((UIView *)target).frame.origin.x];
     }
     return [super valueForTarget:target key:key];
 }
@@ -31,20 +31,20 @@
 
 
 @implementation GLDTweenPropertyY
-- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]){
-        UIView *view = (UIView*)target;
+- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]) {
+        UIView *view = (UIView *)target;
         CGRect rect = view.frame;
-        rect.origin = CGPointMake(view.frame.origin.x, ((NSNumber*)value).floatValue);
+        rect.origin = CGPointMake(view.frame.origin.x, ((NSNumber *)value).floatValue);
         view.frame = rect;
-    }else{
+    } else {
         [super setValue:value forTarget:target key:key];
     }
 }
 
-- (id)valueForTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]]){
-        return [NSNumber numberWithFloat:((UIView*)target).frame.origin.x] ;
+- (id)valueForTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]]) {
+        return [NSNumber numberWithFloat:((UIView *)target).frame.origin.x];
     }
     return [super valueForTarget:target key:key];
 }
@@ -52,20 +52,20 @@
 
 
 @implementation GLDTweenPropertyWidth
-- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]){
-        UIView *view = (UIView*)target;
+- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]) {
+        UIView *view = (UIView *)target;
         CGRect rect = view.frame;
-        rect.size = CGSizeMake(((NSNumber*)value).floatValue, view.frame.size.height);
+        rect.size = CGSizeMake(((NSNumber *)value).floatValue, view.frame.size.height);
         view.frame = rect;
-    }else{
+    } else {
         [super setValue:value forTarget:target key:key];
     }
 }
 
-- (id)valueForTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]]){
-        return [NSNumber numberWithFloat:((UIView*)target).frame.size.width] ;
+- (id)valueForTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]]) {
+        return [NSNumber numberWithFloat:((UIView *)target).frame.size.width];
     }
     return [super valueForTarget:target key:key];
 }
@@ -73,20 +73,20 @@
 
 
 @implementation GLDTweenPropertyHeight
-- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]){
-        UIView *view = (UIView*)target;
+- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]) {
+        UIView *view = (UIView *)target;
         CGRect rect = view.frame;
-        rect.size = CGSizeMake(view.frame.size.width, ((NSNumber*)value).floatValue);
+        rect.size = CGSizeMake(view.frame.size.width, ((NSNumber *)value).floatValue);
         view.frame = rect;
-    }else{
+    } else {
         [super setValue:value forTarget:target key:key];
     }
 }
 
-- (id)valueForTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]]){
-        return [NSNumber numberWithFloat:((UIView*)target).frame.size.height] ;
+- (id)valueForTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]]) {
+        return [NSNumber numberWithFloat:((UIView *)target).frame.size.height];
     }
     return [super valueForTarget:target key:key];
 }
@@ -97,20 +97,20 @@
  Property Proxy for UIView.center.x
  */
 @implementation GLDTweenPropertyCenterX
-- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]){
-        UIView *view = (UIView*)target;
+- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]) {
+        UIView *view = (UIView *)target;
         CGPoint pt = view.center;
-        pt.x = ((NSNumber*)value).floatValue;
+        pt.x = ((NSNumber *)value).floatValue;
         view.center = pt;
-    }else{
+    } else {
         [super setValue:value forTarget:target key:key];
     }
 }
 
-- (id)valueForTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]]){
-        return [NSNumber numberWithFloat:((UIView*)target).center.x] ;
+- (id)valueForTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]]) {
+        return [NSNumber numberWithFloat:((UIView *)target).center.x];
     }
     return [super valueForTarget:target key:key];
 }
@@ -121,20 +121,20 @@
  Property Proxy for UIView.center.y
  */
 @implementation GLDTweenPropertyCenterY
-- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]){
-        UIView *view = (UIView*)target;
+- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]] && [value isKindOfClass:[NSNumber class]]) {
+        UIView *view = (UIView *)target;
         CGPoint pt = view.center;
-        pt.y = ((NSNumber*)value).floatValue;
+        pt.y = ((NSNumber *)value).floatValue;
         view.center = pt;
-    }else{
+    } else {
         [super setValue:value forTarget:target key:key];
     }
 }
 
-- (id)valueForTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]]){
-        return [NSNumber numberWithFloat:((UIView*)target).center.y] ;
+- (id)valueForTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]]) {
+        return [NSNumber numberWithFloat:((UIView *)target).center.y];
     }
     return [super valueForTarget:target key:key];
 }
@@ -145,17 +145,17 @@
  Property Proxy for UIView.layer.transform3D
  */
 @implementation GLDTweenPropertyTransform3D
-- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]]){
-        ((UIView*)target).layer.transform = [value CATransform3DValue];
-    }else{
+- (void)setValue:(NSValue *)value forTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]]) {
+        ((UIView *)target).layer.transform = [value CATransform3DValue];
+    } else {
         [super setValue:value forTarget:target key:key];
     }
 }
 
-- (id)valueForTarget:(NSObject *)target key:(NSString *)key{
-    if([target isKindOfClass:[UIView class]]){
-        return [NSValue valueWithCATransform3D:((UIView*)target).layer.transform];
+- (id)valueForTarget:(NSObject *)target key:(NSString *)key {
+    if ([target isKindOfClass:[UIView class]]) {
+        return [NSValue valueWithCATransform3D:((UIView *)target).layer.transform];
     }
     return [super valueForTarget:target key:key];
 }

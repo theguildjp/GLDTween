@@ -12,31 +12,31 @@
 @implementation GLDTweenProperty
 
 
-- (void)setValue:(id)value forTarget:(NSObject*)target key:(NSString *)key{
+- (void)setValue:(id)value forTarget:(NSObject *)target key:(NSString *)key {
     [target setValue:value forKey:key];
 }
 
 
-- (id)valueForTarget:(NSObject*)target key:(NSString*)key{
+- (id)valueForTarget:(NSObject *)target key:(NSString *)key {
     return [target valueForKey:key];
 }
 
 
-- (void)setStartValueForTarget:(NSObject*)target key:(NSString*)key{
+- (void)setStartValueForTarget:(NSObject *)target key:(NSString *)key {
     [target setValue:self.startValue forKey:key];
 }
 
 
-- (void)setTweenValueForTarget:(NSObject*)target key:(NSString*)key time:(float)t duration:(float)d ease:(GLDEasing*)ease{
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
 }
 
 
-- (void)setCompleteValueForTarget:(NSObject*)target key:(NSString*)key{
+- (void)setCompleteValueForTarget:(NSObject *)target key:(NSString *)key {
     [self setValue:self.completeValue forTarget:target key:key];
 }
 
 
-- (void)updateStartValueForTarget:(NSObject *)target key:(NSString *)key{
+- (void)updateStartValueForTarget:(NSObject *)target key:(NSString *)key {
     self.startValue = [self valueForTarget:target key:key];
 }
 
@@ -48,14 +48,14 @@
 @implementation GLDTweenPropertyCGFloat
 
 
-- (NSString*)type{
+- (NSString *)type {
     return @"CGFloat";
 }
 
 
-- (void)setTweenValueForTarget:(NSObject*)target key:(NSString*)key time:(float)t duration:(float)d ease:(GLDEasing*)ease{
-    float b = ((NSNumber*)self.startValue).floatValue;
-    float c = ((NSNumber*)self.completeValue).floatValue - b;
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
+    float b = ((NSNumber *)self.startValue).floatValue;
+    float c = ((NSNumber *)self.completeValue).floatValue - b;
     float val = [ease t:t b:b c:c d:d];
     [self setValue:[NSNumber numberWithFloat:val] forTarget:target key:key];
 }
@@ -68,12 +68,12 @@
 @implementation GLDTweenPropertyCGPoint
 
 
-- (NSString*)type{
+- (NSString *)type {
     return @"CGPoint";
 }
 
 
-- (void)setTweenValueForTarget:(NSObject*)target key:(NSString*)key time:(float)t duration:(float)d ease:(GLDEasing*)ease{
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
     CGPoint spt = self.startValue.CGPointValue;
     CGPoint cpt = self.completeValue.CGPointValue;
     CGPoint destPt = CGPointMake([ease t:t b:spt.x c:cpt.x - spt.x d:d],
@@ -89,12 +89,12 @@
 @implementation GLDTweenPropertyCGSize
 
 
-- (NSString*)type{
+- (NSString *)type {
     return @"CGSize";
 }
 
 
-- (void)setTweenValueForTarget:(NSObject*)target key:(NSString*)key time:(float)t duration:(float)d ease:(GLDEasing*)ease{
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
     CGPoint ssz = self.startValue.CGPointValue;
     CGPoint csz = self.completeValue.CGPointValue;
     CGSize destSz = CGSizeMake([ease t:t b:ssz.x c:csz.x - ssz.x d:d],
@@ -110,12 +110,12 @@
 @implementation GLDTweenPropertyCGRect
 
 
-- (NSString*)type{
+- (NSString *)type {
     return @"CGRect";
 }
 
 
-- (void)setTweenValueForTarget:(NSObject*)target key:(NSString*)key time:(float)t duration:(float)d ease:(GLDEasing*)ease{
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
     CGRect src = self.startValue.CGRectValue;
     CGRect crc = self.completeValue.CGRectValue;
     CGRect destRc = CGRectMake([ease t:t b:src.origin.x c:crc.origin.x - src.origin.x d:d],
@@ -133,12 +133,12 @@
 @implementation GLDTweenPropertyCGAffineTransform
 
 
-- (NSString*)type{
+- (NSString *)type {
     return @"CGAffineTransform";
 }
 
 
-- (void)setTweenValueForTarget:(NSObject*)target key:(NSString*)key time:(float)t duration:(float)d ease:(GLDEasing*)ease{
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
     CGAffineTransform sat = self.startValue.CGAffineTransformValue;
     CGAffineTransform cat = self.completeValue.CGAffineTransformValue;
     CGAffineTransform destAt = CGAffineTransformMake([ease t:t b:sat.a c:cat.a - sat.a d:d],
@@ -158,12 +158,12 @@
 @implementation GLDTweenPropertyCATransform3D
 
 
-- (NSString*)type{
+- (NSString *)type {
     return @"CATransform3D";
 }
 
 
-- (void)setTweenValueForTarget:(NSObject*)target key:(NSString*)key time:(float)t duration:(float)d ease:(GLDEasing*)ease{
+- (void)setTweenValueForTarget:(NSObject *)target key:(NSString *)key time:(float)t duration:(float)d ease:(GLDEasing *)ease {
     CATransform3D st3 = self.startValue.CATransform3DValue;
     CATransform3D ct3 = self.completeValue.CATransform3DValue;
     
