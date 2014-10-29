@@ -310,7 +310,7 @@ lockInteraction、unlockInteractionパラメータで、アニメーション中
 <li>GLDEaseTypeInOutQuad</li>
 <li>GLDEaseTypeInCubic</li>
 <li>GLDEaseTypeOutCubic</li>
-<li>GLDEasingTypeInOutCubic</li>
+<li>GLDEaseTypeInOutCubic</li>
 </ul>
 
 
