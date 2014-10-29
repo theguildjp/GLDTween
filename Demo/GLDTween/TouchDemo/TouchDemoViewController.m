@@ -3,7 +3,7 @@
 //  GLDTween
 //
 //  Created by Takayuki Fukatsu on 2014/10/03.
-//  Copyright (c) 2014年 THE GUILD. All rights reserved.
+//  Copyright (c) 2014 THE GUILD. All rights reserved.
 //
 
 #import "TouchDemoViewController.h"
