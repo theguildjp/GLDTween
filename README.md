@@ -1,6 +1,6 @@
 GLDTween
 ========
-GLDTween is a powerful animation library for iOS. It enables you to write complex animation with siple coding.
+GLDTween is a powerful animation library for iOS. It enables you to write complex animation with simple coding.
 
 GLDTweenはiOS用のハンディなアニメーション用ライブラリです。高度なアニメーションを、シンプルかつパワフルに記述できます。
 
