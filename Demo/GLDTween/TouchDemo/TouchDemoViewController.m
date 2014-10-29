@@ -2,7 +2,7 @@
 //  TouchDemoViewController.m
 //  GLDTween
 //
-//  Created by 深津 貴之 on 2014/10/03.
+//  Created by Takayuki Fukatsu on 2014/10/03.
 //  Copyright (c) 2014年 THE GUILD. All rights reserved.
 //
 

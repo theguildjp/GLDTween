@@ -2,7 +2,7 @@
 //  GLDSpecialProperty.h
 //  GLDTween
 //
-//  Created by 深津 貴之 on 2014/10/01.
+//  Created by Takayuki Fukatsu on 2014/10/01.
 //  Copyright (c) 2014年 THE GUILD. All rights reserved.
 //
 
