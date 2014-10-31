@@ -253,7 +253,7 @@
 @end
 
 
-#warning need optimize
+// TODO: optimize
 @implementation GLDEasingFunctionInBounce
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     //return c - easeOutBounce (d - t, 0, c, d) + b;
@@ -298,7 +298,7 @@
 @end
 
 
-#warning need optimize
+// TODO: optimize
 @implementation GLDEasingFunctionInOutBounce
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     if (t < d / 2) {

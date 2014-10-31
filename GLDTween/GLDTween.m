@@ -462,7 +462,7 @@ NSMutableDictionary *reservedPropertyNames;
 }
 
 
-#warning needs optimization
+// TODO: optimize
 - (BOOL)isTweening:(NSObject *)target {
     for (int i = 0; i < tweens.count; i++) {
         GLDTweenTween *tw = (GLDTweenTween *)tweens[i];
@@ -565,7 +565,7 @@ NSMutableDictionary *reservedPropertyNames;
 
 
 - (BOOL)registerEasingPlugin:(Class)class forKey:(NSString *)key {
-    #warning Show Warning and override when same keyname is given.
+    // TODO: Show warning and override when same keyname is given.
     GLDEasingFunction *easing = [[class alloc] init];
     [easings setObject:easing forKey:key];
     [easingNames addObject:key];
@@ -574,7 +574,7 @@ NSMutableDictionary *reservedPropertyNames;
 
 
 - (BOOL)registerSpecialPropertyPlugin:(Class)class forKey:(NSString *)key {
-    #warning Show Warning and override when same keyname is given.
+    // TODO: Show warning and override when same keyname is given.
     NSString *className = NSStringFromClass(class);
     [specialProperties setObject:className forKey:key];
     return YES;
