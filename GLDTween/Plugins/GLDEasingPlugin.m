@@ -140,35 +140,35 @@
 
 @implementation GLDEasingFunctionInSine
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
-    return -c * cos(t / d * (M_PI_2)) + c + b;
+    return -c * cosf(t / d * (M_PI_2)) + c + b;
 }
 @end
 
 
 @implementation GLDEasingFunctionOutSine
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
-    return c * sin(t / d * (M_PI_2)) + b;
+    return c * sinf(t / d * (M_PI_2)) + b;
 }
 @end
 
 
 @implementation GLDEasingFunctionInOutSine
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
-    return -c / 2 * (cos(M_PI * t / d) - 1) + b;
+    return -c / 2 * (cosf(M_PI * t / d) - 1) + b;
 }
 @end
 
 
 @implementation GLDEasingFunctionInExpo
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
-    return c * pow(2, 10 * (t / d - 1)) + b;
+    return c * powf(2.0f, 10 * (t / d - 1)) + b;
 }
 @end
 
 
 @implementation GLDEasingFunctionOutExpo
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
-    return c * (-pow(2, -10 * t / d) + 1) + b;
+    return c * (-powf(2.0f, -10 * t / d) + 1) + b;
 }
 @end
 
@@ -177,10 +177,10 @@
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d * 2;
     if (t2 < 1) {
-        return c / 2 * pow(2, 10 * (t2 - 1)) + b;
+        return c / 2 * powf(2.0f, 10 * (t2 - 1)) + b;
     }
     t2--;
-    return c / 2 * (-pow(2, -10 * t2) + 2) + b;
+    return c / 2 * (-powf(2.0f, -10 * t2) + 2) + b;
 }
 @end
 
@@ -188,7 +188,7 @@
 @implementation GLDEasingFunctionInCirc
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
-    return -c * (sqrt(1 - t2 * t2) - 1) + b;
+    return -c * (sqrtf(1 - t2 * t2) - 1) + b;
 }
 @end
 
@@ -197,7 +197,7 @@
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d;
     --t2;
-    return c * sqrt(1 - t2 * t2) + b;
+    return c * sqrtf(1 - t2 * t2) + b;
 }
 @end
 
@@ -206,10 +206,10 @@
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     float t2 = t / d * 2;
     if (t2 < 1) {
-        return -c / 2 * (sqrt(1 - t2 * t2) - 1) + b;
+        return -c / 2 * (sqrtf(1 - t2 * t2) - 1) + b;
     }
     t2 -= 2;
-    return c / 2 * (sqrt(1 - t2 * t2) + 1) + b;
+    return c / 2 * (sqrtf(1 - t2 * t2) + 1) + b;
 }
 @end
 
@@ -221,7 +221,7 @@
 
 @implementation GLDEasingFunctionInBack
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
-    float s = 1.70158;
+    float s = 1.70158f;
     t /= d;
     return c * t * t * ((s + 1) * t - s) + b;
 }
@@ -230,7 +230,7 @@
 
 @implementation GLDEasingFunctionOutBack
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
-    float s = 1.70158;
+    float s = 1.70158f;
     t = t / d - 1;
     return c * (t * t * ((s + 1) * t + s) + 1) + b;
 }
@@ -239,8 +239,8 @@
 
 @implementation GLDEasingFunctionInOutBack
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
-    float s = 1.70158;
-    float k = 1.525;
+    float s = 1.70158f;
+    float k = 1.525f;
     t /= d / 2;
     s *= k;
     if (t < 1) {
@@ -261,17 +261,17 @@
     float t2 = d - t;
     //from easeOutBounce
     t2 /= d;
-    if (t2 < (1 / 2.75)) {
-        val = c * (7.5625 * t2 * t2);
-    } else if (t < (2 / 2.75)) {
-        t2 -= (1.5 / 2.75);
-        val = c * (7.5625 * t2 * t2 + .75);
-    } else if (t < (2.5 / 2.75)) {
-        t2 -= (2.25 / 2.75);
-        val = c * (7.5625 * t2 * t2 + .9375);
+    if (t2 < (1 / 2.75f)) {
+        val = c * (7.5625f * t2 * t2);
+    } else if (t < (2 / 2.75f)) {
+        t2 -= (1.5f / 2.75f);
+        val = c * (7.5625f * t2 * t2 + 0.75f);
+    } else if (t < (2.5f / 2.75f)) {
+        t2 -= (2.25f / 2.75f);
+        val = c * (7.5625f * t2 * t2 + 0.9375f);
     } else {
-        t2 -= (2.625 / 2.75);
-        val = c * (7.5625 * t2 * t2 + .984375);
+        t2 -= (2.625f / 2.75f);
+        val = c * (7.5625f * t2 * t2 + 0.984375f);
     }
     
     return c - val + b;
@@ -282,17 +282,17 @@
 @implementation GLDEasingFunctionOutBounce
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     t /= d;
-    if (t < (1 / 2.75)) {
-        return c * (7.5625 * t * t) + b;
-    } else if (t < (2 / 2.75)) {
-        t -= (1.5 / 2.75);
-        return c * (7.5625 * t * t + .75) + b;
-    } else if (t < (2.5 / 2.75)) {
-        t -= (2.25 / 2.75);
-        return c * (7.5625 * t * t + .9375) + b;
+    if (t < (1 / 2.75f)) {
+        return c * (7.5625f * t * t) + b;
+    } else if (t < (2 / 2.75f)) {
+        t -= (1.5f / 2.75f);
+        return c * (7.5625f * t * t + 0.75f) + b;
+    } else if (t < (2.5f / 2.75f)) {
+        t -= (2.25f / 2.75f);
+        return c * (7.5625f * t * t + 0.9375f) + b;
     } else {
-        t -= (2.625 / 2.75);
-        return c * (7.5625 * t * t + .984375) + b;
+        t -= (2.625f / 2.75f);
+        return c * (7.5625f * t * t + 0.984375f) + b;
     }
 }
 @end
@@ -302,9 +302,9 @@
 @implementation GLDEasingFunctionInOutBounce
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
     if (t < d / 2) {
-        return [self inT:t * 2 b:0 c:c d:d] * 0.5 + b;
+        return [self inT:t * 2 b:0 c:c d:d] * 0.5f + b;
     } else {
-        return [self outT:t * 2 - d b:0 c:c d:d] * 0.5 + c * 0.5 + b;
+        return [self outT:t * 2 - d b:0 c:c d:d] * 0.5f + c * 0.5f + b;
     }
 }
 
@@ -314,17 +314,17 @@
 
 - (float)outT:(float)t b:(float)b c:(float)c d:(float)d {
     t /= d;
-    if (t < (1 / 2.75)) {
-        return c * (7.5625 * t * t) + b;
-    } else if (t < (2 / 2.75)) {
-        t -= (1.5 / 2.75);
-        return c * (7.5625 * t * t + .75) + b;
-    } else if (t < (2.5 / 2.75)) {
-        t -= (2.25 / 2.75);
-        return c * (7.5625 * t * t + .9375) + b;
+    if (t < (1 / 2.75f)) {
+        return c * (7.5625f * t * t) + b;
+    } else if (t < (2 / 2.75f)) {
+        t -= (1.5f / 2.75f);
+        return c * (7.5625f * t * t + 0.75f) + b;
+    } else if (t < (2.5f / 2.75f)) {
+        t -= (2.25f / 2.75f);
+        return c * (7.5625f * t * t + 0.9375f) + b;
     } else {
-        t -= (2.625 / 2.75);
-        return c * (7.5625 * t * t + .984375) + b;
+        t -= (2.625f / 2.75f);
+        return c * (7.5625f * t * t + 0.984375f) + b;
     }
 }
 @end
@@ -332,62 +332,62 @@
 
 @implementation GLDEasingFunctionInElastic
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
-    float s = 1.70158;
+    float s = 1.70158f;
     float p = 0;
     float a = c;
     if (t == 0) return b;
     if ((t /= d) == 1) return b+c;
-    if (!p) p = d * .3;
-    if (a < abs(c)) {
+    if (!p) p = d * 0.3f;
+    if (a < fabsf(c)) {
         a = c;
         s = p / 4;
     } else {
-        s = p / (2 * 3.1419) * asin (c/a);
+        s = p / (2 * 3.1419f) * asinf(c / a);
     }
     --t;
-    return -(a * pow(2, 10 * t) * sin((t * d - s) * (2 * 3.1419) / p)) + b;
+    return -(a * powf(2, 10 * t) * sinf((t * d - s) * (2 * 3.1419f) / p)) + b;
 }
 @end
 
 
 @implementation GLDEasingFunctionOutElastic
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
-    float s = 1.70158;
+    float s = 1.70158f;
     float p = 0;
     float a = c;
     if (t == 0) return b;
-    if ((t /= d) == 1) return b+c;
-    if (!p) p = d * .3;
-    if (a < abs(c)) {
+    if ((t /= d) == 1) return b + c;
+    if (!p) p = d * 0.3f;
+    if (a < fabsf(c)) {
         a = c;
         s = p / 4;
     } else {
-        s = p / (2 * 3.1419) * asin(c / a);
+        s = p / (2 * 3.1419f) * asinf(c / a);
     };
-    return a * pow(2, -10 * t) * sin((t * d - s) * (2 * 3.1419) / p) + c + b;
+    return a * powf(2.0f, -10 * t) * sinf((t * d - s) * (2 * 3.1419f) / p) + c + b;
 }
 @end
 
 
 @implementation GLDEasingFunctionInOutElastic
 - (float)t:(float)t b:(float)b c:(float)c d:(float)d {
-    float s = 1.70158;
+    float s = 1.70158f;
     float p = 0;
     float a = c;
     if (t == 0) return b;
     if ((t /= d / 2) == 2) return b + c;
-    if (!p) p = d * (.3 * 1.5);
-    if (a < abs(c)) {
+    if (!p) p = d * (0.3f * 1.5f);
+    if (a < fabsf(c)) {
         a = c;
         s = p / 4;
     } else {
-        s = p / (2 * 3.1419) * asin(c / a);
+        s = p / (2 * 3.1419f) * asinf(c / a);
     }
     if (t < 1) {
         --t;
-        return -.5 * (a * pow(2, 10 * t) * sin((t * d - s) * (2 * 3.1419) / p)) + b;
+        return -0.5 * (a * powf(2.0f, 10 * t) * sinf((t * d - s) * (2 * 3.1419f) / p)) + b;
     }
     --t;
-    return a * pow(2, -10 * t) * sin((t * d - s) * (2 * 3.1419) / p) * .5 + c + b;
+    return a * powf(2.0f, -10 * t) * sinf((t * d - s) * (2 * 3.1419f) / p) * 0.5f + c + b;
 }
 @end
