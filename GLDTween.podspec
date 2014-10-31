@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.social_media_url = "http://twitter.com/fladdict"
 
   s.requires_arc = true
-  s.source       = { :git => "https://github.com/theguildjp/GLDTween.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/theguildjp/GLDTween.git", :tag => "0.0.2" }
   s.source_files = "GLDTween/**/*.{h,m,swift}"
 end
