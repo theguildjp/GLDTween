@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version     = "0.0.1"
   s.platform    = :ios, "7.0"
   s.license     = { :type => "MIT", :file => "LICENSE" }
-  s.summary     = "Fancy Animation Engine for iOS written with Swift"
+  s.summary     = "Fancy Animation Engine for iOS"
   s.description = <<-DESC
                   iOS needs better animation engine. CAAnimation is not so handy, so we did.
                   DESC
