@@ -62,22 +62,20 @@ NSString *const GLDTweenParamLocksInteraction = @"locksInteraction";
 NSString *const GLDTweenParamUnlocksInteraction = @"unlocksInteraction";
 
 
-@implementation GLDTween
-
-
-//Time Management
-CADisplayLink *displayLink;
-NSTimeInterval currentTime;
-
-//Data Containers
-NSMutableArray *tweens;
-NSMutableDictionary *easings;
-NSMutableDictionary *specialProperties;
-
-//Name Table
-NSMutableArray *easingNames;
-NSMutableDictionary *reservedPropertyNames;
-
+@implementation GLDTween {
+    //Time Management
+    CADisplayLink *displayLink;
+    NSTimeInterval currentTime;
+    
+    //Data Containers
+    NSMutableArray *tweens;
+    NSMutableDictionary *easings;
+    NSMutableDictionary *specialProperties;
+    
+    //Name Table
+    NSMutableArray *easingNames;
+    NSMutableDictionary *reservedPropertyNames;
+}
 
 #pragma mark - Public 
 
